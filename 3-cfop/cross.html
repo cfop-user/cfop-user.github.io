@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cross</title>
+		<meta http-equiv="refresh" content="111111">
+		<link id = "default" href="/style.css" rel="stylesheet" type="text/css" />
+		<link rel="icon" type="image/x-icon" href="Images/cube1.png"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	</head>
+	<body>
+		
+		
+		<!--Heading-->
+
+		<h1 class = "mainhead">
+			<div>
+				<a href="/index.html" class = "homebutton"><i class="fa fa-home"></i></a>
+				<span>CFOP</span>
+			</div>
+		</h1> 
+
+		<div class ="nav">
+			<a href ="3-home.html">3x3</a>
+			<a href ="cross.html">Cross</a>
+			<a href ="f2l.html">More</a>
+			<a href ="f2l.html">About</a>
+		</div>
+
+
+		<!-- modal -->
+		<div id = "modal" class = "modal">
+			<div id = "mod-content" class = "modalcontent">
+				<span class = "close">&#10006</span>
+				<button class = "theme-button" onclick ="dark()">dark theme</button>
+				<button class = "theme-button" onclick ="defa()">default theme</button>
+			</div>
+		</div>
+
+		<!--modal button-->
+		<button id = "mod-button" class = "mod-button">Click me</button>
+
+		<!--js for theme -->
+		<script>
+			function swapSheet(sheet) {
+				document.getElementById("default").setAttribute("href", sheet); 		 
+			}
+
+			function dark(){
+				swapSheet("/dark.css")
+			}
+			function defa(){
+				swapSheet("/style.css")
+			}
+			/*
+			Also need to add the if statement so it actualy toggles
+			toggle.onclick = function () {
+				if (href="dark.css") {
+					swapSheet("style.css");
+				} 
+				else {
+					swapSheet("dark.css");
+				}
+			}
+			*/
+		</script>
+		<!-- the js for the modal buttons -->
+		<script>
+			var modal = document.getElementById("modal");
+			var bttn = document.getElementById("mod-button");
+			var close = document.getElementsByClassName("close")[0];
+			bttn.onclick = function() {
+				modal.style.display = "block";
+			}
+			close.onclick = function() {
+				modal.style.display = "none";
+			}	
+		</script>
+
+
+		<div class = "next-container">
+			<a href = "/3-cfop/f2l.html">Next → </a>
+		</div>
+	</div>
+  </body>
+</html>
