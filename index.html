@@ -8,7 +8,7 @@
 		<link rel="icon" type="image/x-icon" href="Images/cube1.png"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
-	<body>
+	<body data-theme="xmas">
 		<!--Heading-->
 
 		<h1 class = "mainhead">
@@ -33,8 +33,10 @@
 				<div id = "mod-content" class = "modalcontent">
 					<span class = "close">&#10006</span>
 					<div class = "themebuttons">
+						
 						<button class = "theme-button" onclick ="dark()"><b>Dark Theme</b></button>
 						<button class = "theme-button" onclick ="defa()"><b>Default Theme</b></button>
+						<button class = "theme-button" onclick ="christmas()"><b>Xmas Theme</b></button>
 					</div>
 				</div>
 			</div>
@@ -45,14 +47,18 @@
 			<!--js for theme -->
 			<script>
 				function swapSheet(sheet) {
-					document.getElementById("default").setAttribute("href", sheet); 		 
+					document.body.setAttribute("data-theme", sheet)
+					// document.getElementById("default").setAttribute("href", sheet); 		 
 				}
 
 				function dark(){
-					swapSheet("dark.css")
+					swapSheet("dark")
 				}
-				function defa(){
-					swapSheet("style.css")
+				function main(){
+					swapSheet("main")
+				}
+				function christmas(){
+					swapSheet("xmas")
 				}
 				/*
 				Also need to add the if statement so it actualy toggles
