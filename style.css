@@ -1,7 +1,8 @@
 * {margin:0;padding:0px}
+
 [data-theme = "main"] {
 	--main: rgb(3, 19, 33);
-	--secondary: rgb(61, 55, 54);
+	--secondary: rgb(26, 57, 68);
 	--text-color: rgb(193, 212, 233);
 	--hover: var(--secondary);
 	--light-text: rgb(199, 192, 246);
