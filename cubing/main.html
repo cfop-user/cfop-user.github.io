@@ -1,36 +1,33 @@
 <!DOCTYPE html>
 <html lang = "en-UK">
 	<head>
-		<!-- https://color.firefox.com/?theme=XQAAAAImAQAAAAAAAABBqYhm849SCia2CaaEGccwS-xMDPr3WmqIMb-4Y8buxy5PGDukvAxjsCSYCzFHp0azVgwzZP-UFwyLyPOzVy5k3LHzR4gg_VURQdCxZpcVJ73qRPhgWjK28yJSu045TYmw32xHXYGC43oG9Rif5Y0C3xc8zumZWtgcjt7dQpVAdV6Ugw23Fyt0zcsdnXFeM8ZJVl7hmxk_CKO_hsgc07dtPjYWrCh8d4ZOqSBozpvpLi-RjY-AMWZKxAmtP7__0X7lYA -->
-		<title>cfop home</title>
+		<title>Cfop home</title>
 		<meta http-equiv="refresh" content="20">
 		<link id = "default" href="style.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" type="image/x-icon" href="Images/cube1.png"/>
+		<script src = "main.js"></script>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 	</head>
+
 	<body data-theme="main">
-		<!--Heading-->
 
-		<h1 class = "mainhead">
-			<div>
-				<a href="index.html" class = "homebutton"><i class="fa fa-home"></i></a>
-				<span>Speedsolving</span>
-			</div>
-		</h1> 
+		<header class = "mainhead">
+				<a href="main.html" class = "homebutton"><i class="fa fa-home"></i></a>
+				<p>Speedsolving</p>
+		</header> 
 
-
-	
 		<div class = "mainbody">
 			<!-- modal -->
-			<div class = "nav">
+			<nav>
 				<a href ="3-cfop/3-home.html">3x3</a>
 				<a href ="3-cfop/cross.html">Cross</a>
 				<a href ="3-cfop/f2l.html">F2l</a>
 				<a href ="3-cfop/oll.html">Oll</a>
 				<a href ="3-cfop/pll.html">Pll</a>
-			</div>
-				<div id = "modal" class = "modal">
-				<div id = "mod-content" class = "modalcontent">
+			</nav>
+
+			<div id = "modal" class = "modal">
+				<div class = "modal-content">
 					<span class = "close">&#10006</span>
 					<div class = "themebuttons">
 						
@@ -41,63 +38,20 @@
 				</div>
 			</div>
 
-			<!--modal button-->
-			<button id = "mod-button" class = "mod-button"><b>Click Me</b></button>
-
-			<!--js for theme -->
-			<script>
-				function swapSheet(sheet) {
-					document.body.setAttribute("data-theme", sheet)
-					// document.getElementById("default").setAttribute("href", sheet); 		 
-				}
-
-				function dark(){
-					swapSheet("dark")
-				}
-				function main(){
-					swapSheet("main")
-				}
-				function christmas(){
-					swapSheet("xmas")
-				}
-				/*
-				Also need to add the if statement so it actualy toggles
-				toggle.onclick = function () {
-					if (href="dark.css") {
-						swapSheet("style.css");
-					} 
-					else {
-						swapSheet("dark.css");
-					}
-				}
-				*/
-			</script>
-			<!-- the js for the modal buttons -->
-			<script>
-				var modal = document.getElementById("modal");
-				var bttn = document.getElementById("mod-button");
-				var close = document.getElementsByClassName("close")[0];
-				bttn.onclick = function() {
-					modal.style.display = "block";
-				}
-				close.onclick = function() {
-					modal.style.display = "none";
-				}	
-			</script>
-
+			<button id = "theme-button"><b>Themes</b></button>
 
 			<!-- The icon buttons-->
 			<div class = "boxes-container">
 				<div>
-					<a href="3-cfop/3-home.html" class = "munich">
-						<img src="Images/home/oll.png"id = "img1" class ="imgcenter">
+					<a href="3-cfop/3-home.html" class = "image-link">
+						<img src="Images/3x3/oll.png">
 						<p class="box_text"><b>3x3</b></p>
 					</a>
 				</div>
 								
 				<div>
 					<a href="4-yau/4-home.html">
-						<img src="Images/4x4/yau.png" id = "img2"class ="imgcenter">
+						<img src="Images/4x4/yau.png">
 						<p class="box_text"><b>4x4</b></p>
 					</a>
 				</div>
