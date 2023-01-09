@@ -53,6 +53,7 @@ body {
 	font-size: 40px;
 	margin: auto;
 	padding: 0;
+	overflow: scroll;
 }
 
 header {
@@ -140,7 +141,6 @@ nav a:hover {
 	opacity: 0.7
 }
 
-
 .boxes-container div a{
 	text-decoration: none;
 	text-align: center;
@@ -149,9 +149,12 @@ nav a:hover {
 .boxes-container {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
-  }
+	place-items: center;
+	width: 70%;
+	margin: auto
+}
   
-  .boxes-container div {
+.boxes-container div {
 	display: flex;
 	flex-direction: column;
 	width: 90%;
@@ -162,20 +165,20 @@ nav a:hover {
 	border-width: 2px;
 	border-radius: 5%;
 	overflow: hidden;
-  }
-  
-  .boxes-container img {
+}
+
+.boxes-container img {
 	object-fit: contain;
 	flex-grow: 1;
 	max-width: 100%;
 	max-height: 100%;
-  }
-  
-  .box_text {
+}
+
+.box_text {
 	display: block;
 	flex-grow: 0;
 	max-height: 100%;
-  }
+}
 
 
 
