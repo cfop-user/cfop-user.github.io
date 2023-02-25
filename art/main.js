@@ -1,32 +1,20 @@
+function initGallery() {
+    const gallery = document.getElementById("portrait-gallery");
+    const dimmer = document.getElementById("dimmer");
+    const images = gallery.children;
+    const originalDimZ = dimmer.style.zIndex
 
-function makeStuff() {
-    console.log("starting make stuff")
-    var gallery = document.getElementsByClassName('gallery')[0]
-    var galleryDivs = gallery.getElementsByTagName("div");
-    console.log(galleryDivs)
-}
+    for (let i = 0; i < images.length; i++) {
+      images[i].addEventListener("mouseover", function(e) {
+        dimmer.style.opacity = '0.4';
+        dimmer.style.zIndex = "98";
+        console.log('success')
+      });
 
-
-
-function adjustTextSize(divs) {
-    console.log("test");
-    console.log(divs)
-    for (let i = 0; i < divs.length; i++) {
-        console.log(divs)
-        const texts = divs[i].querySelectorAll("p");
-        for (let j = 0; j < texts.length; j++) {
-            console.log(texts)
-            while (divs[i].clientHeight < texts[j].clientHeight) {
-                texts[j].style.fontSize = (parseFloat(getComputedStyle(texts[j]).fontSize) - 1) + "px";
-            }
-        }
+      images[i].addEventListener("mouseout", function(e) {
+        dimmer.style.opacity = '0';
+        dimmer.style.zIndex = originalDimZ;
+        console.log('success2')
+      });
     }
-}
-
-
-window.onload = makeStuff();
-adjustTextSize(galleryDivs);
-window.addEventListener("resize", adjustTextSize);
-
-
-// credit to cgpt
+  }
