@@ -1,5 +1,5 @@
 *:root {
-	--element-width: 70%
+	--element-width: 90%
 }
 
 [data-theme="main"] {
@@ -16,6 +16,22 @@
 	--subtle-shadow: rgba(53, 43, 54, 0.274); */
 
 }
+
+[data-theme="funky"] {
+	--main: #14213D;
+	--main2: #FCA311;
+	--main3:#E5E5f5;
+	--accent: #E1EFE6;
+	--main-font: Poppins;
+	--secondary-font: Cinzel;
+	/* --nav-text-hover:rgb(169, 184, 231);
+	--navborder: #311e417c;
+	--navhover: #373869;
+	--link: rgb(41, 25, 48);
+	--subtle-shadow: rgba(53, 43, 54, 0.274); */
+
+}
+  
   
 [data-theme="dark"] {
 	--main: rgb(10, 9, 10);
@@ -31,19 +47,19 @@
 	--navhover: #3f3944;
 	--link: rgb(41, 25, 48);
 }
+
 [data-theme="xmas"] {
 	--main: #94161e;
 	--main2: #226F54;
-	--main3:#91021B;
-	--mainlight: rgb(218, 118, 118);
-	--hicon: rgb(192, 189, 189);
-	--hicon-op:rgba(53, 49, 49, 0.8);
-	--navbar: var(--main2);
-	--nav-text: black;
-	--nav-text-hover:rgb(169, 184, 231);
-	--navborder: #332d387c;
-	--navhover: #3f3944;
+	--main3:#335C67;
+	--accent: #E1EFE6;
+	--main-font: Poppins;
+	--secondary-font: Cinzel;
+	/* --nav-text-hover:rgb(169, 184, 231);
+	--navborder: #311e417c;
+	--navhover: #373869;
 	--link: rgb(41, 25, 48);
+	--subtle-shadow: rgba(53, 43, 54, 0.274); */
 
 }
   
@@ -54,7 +70,7 @@ body {
 	font-size: 40px;
 	margin: auto;
 	padding: 0;
-	width: 90%;
+	width: var(--element-width);
 	overflow: scroll;
 }
 
@@ -69,7 +85,6 @@ header {
 	font-size: 60px;
 	display: flex;
 	padding: 4px;
-	border-radius: 10%;
 	text-align: center;
 	background-color: var(--main2);
 	font-family: var(--secondary-font), serif;
@@ -268,31 +283,39 @@ nav a:hover {
 
 /* gallery stuff */
 .gallery {
-	margin: 5% auto 5%;
+	margin: 5% 0% 5%;
 	display: flex;
 	place-items: center;
 	gap: 2%;
-	width: var(--element-width);
 	height: max-content;
-	padding: 5%;
-	box-sizing: content-box;
+	padding: 5% 0% 5%;
+	/* box-sizing: content-box; */
+	/* box-sizing: border-box; */
 	border-color: var(--main3);
 	border-width: 3px;
 	border-radius: 5px;
-	border-style: solid none
+	border-style: solid none;
+	background-color: #f3f3f309
 }
-  
+#landscape-gallery {
+	display: grid;
+	box-sizing: border-box;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}  
 .gallery div {
 	width: 100%;
 	height: 100%;
 	opacity: 60%;
-	transition: width 0.4s, height 0.4s,z-index,0.4s opacity 0.5s;
+	object-fit: cover;
+	transform: scale(1);
+	transition: transform 0.4s,z-index,0.4s opacity 0.5s;
 	/* transition-delay: 0.5s; */
 	transition-timing-function: ease-out;
 }
 
 .gallery div:hover{
-	width: 105%; height: 105%; opacity: 1; z-index: 99;
+	transform: scale(1.09); opacity: 1; z-index: 99;
 	
 }
 /* .gallery div:not(:hover){
@@ -315,5 +338,5 @@ nav a:hover {
 	background-color: black;
 	z-index: -1;
 	opacity: 0;
-	transition: opacity 0.8s, z-index 0.3s;
+	transition: opacity 0.5s, z-index 0.5s;
 }
