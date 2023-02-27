@@ -24,4 +24,15 @@ function initGallery(id) {
       });
 
     }
+  };
+
+const body = document.getElementsByTagName("body")[0];
+const navs = document.getElementsByTagName("navs");
+console.log("body and nav declared")
+document.addEventListener("scroll", function(_e){
+  console.log("scroll detected");
+  for (let i = 0; i < navs.length; i++) {
+    navs[i].style.borderRadius = "25vw";
+    console.log("succes rounding")
   }
+});

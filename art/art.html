@@ -4,11 +4,11 @@
 		<title>My art :)</title>
 		<!-- <script src = "main.js"></script> -->
 		<!-- <meta http-equiv="refresh" content="111111"> -->
-		<link id = "default" href="style.css" rel="stylesheet" type="text/css" />
+		<link id = "default" href="../style.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Poppins">
 		<script src="https://kit.fontawesome.com/a4347c6d31.js" crossorigin="anonymous"></script>
 	</head>
-	<body data-theme = "main">
+	<body id = "body" data-theme = "main">
 		<div id = "dimmer"></div>
 
 		<header class = "mainhead">
@@ -27,24 +27,28 @@
 				</div>
 			</div>
 			
+			<nav>
+				<a href ="/index.html">Home</a>
+				<a href ="/art/art.html">Art</a>		
+				<a href = "cubing/main.html">Cubing</a>
+			</nav>
+	
 			<div class = "gallery" id = "portrait-gallery">
-				<div>
+				<div id = "mask">
 					<img src = "images/mask moment.png">
 				</div>
-				<div>
+				<div id = "strandy">
 					<img src = "images/woman with hair.png">
 				</div>
-				<div>
+				<div id = "sleeveless">
 					<img src = "images/actual2.png">
 				</div>
-				<div>
+				<div id = "sketch">
 					<img src = "images/sketch.png">
 				</div>
-
 				<script src="main.js"></script>
   				<script>initGallery("portrait-gallery");</script>
 			</div>
-
 
 			<div class = "gallery" id = "landscape-gallery">
 				<div>
