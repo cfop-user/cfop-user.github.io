@@ -223,6 +223,7 @@ nav a:hover {
   
 }
 /*TODO add transition to the animation, so when you click off it doesnt jerk back, but smoothly stopss */
+
 .grid-nav > * {
 	border: 10px solid var(--main);
 }
@@ -341,12 +342,23 @@ nav a:hover {
 	0% {
 		transform: none;
 	}
-	33% {
-		transform: translate(0px,-20%);
+	25% {
+		transform: translate(0px,-10%);
+		transform: skew(0px, 150%);
 	}
-	66% {
-		transform: translate(0px,20%);
+	50% {
+		transform: translate(0px,0%);
+		transform: skew(0,0);
 	}
+	75% {
+		transform: translate(0px,-5%);
+	}	
+	/* 88% {
+		transform: translate(0px,0%);
+	}
+	94% {
+		transform: translate(0px,-5%);
+	}	 */
 	100% {
 		transform: none;
 	}

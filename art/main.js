@@ -27,16 +27,16 @@ function initGallery(id) {
   };
 
 function initGridNav(){
-  const gridElements = document.getElementsByClassName("grid-nav")[0].children[0].children;
+  const gridElements = document.getElementsByClassName("grid-nav")[0].children;
   console.log(gridElements)
   for (let i = 0; i < gridElements.length; i++) {
-    gridElements[i].addEventListener("mouseover", function(e) {
-      console.log("overr")
-      gridElements[i].style.animation = "sway 5s linear 0s infinite alternate";
+    gridElements[i].children[0].addEventListener("mouseover", function(e) {
+      console.log("overr");
+      gridElements[i].children[0].style.animation = "sway 0.7s linear 0s 1";
+      gridElements[i].children[0].style.animationTimingFunction = "cubic-bezier(0,.5,.94,.69)";
     });
-
-    gridElements[i].addEventListener("mouseout", function(e) {
-      gridElements[i].style.animation = "none";
+    gridElements[i].children[0].addEventListener("mouseout", function(e) {
+      gridElements[i].children[0].style.animation = "none";
     });
 }};
 
