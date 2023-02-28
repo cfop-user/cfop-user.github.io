@@ -26,6 +26,21 @@ function initGallery(id) {
     }
   };
 
+function initGridNav(){
+  const gridElements = document.getElementsByClassName("grid-nav")[0].children[0].children;
+  console.log(gridElements)
+  for (let i = 0; i < gridElements.length; i++) {
+    gridElements[i].addEventListener("mouseover", function(e) {
+      console.log("overr")
+      gridElements[i].style.animation = "sway 5s linear 0s infinite alternate";
+    });
+
+    gridElements[i].addEventListener("mouseout", function(e) {
+      gridElements[i].style.animation = "none";
+    });
+}};
+
+
 const body = document.getElementsByTagName("body")[0];
 const navs = document.getElementsByTagName("navs");
 console.log("body and nav declared")
