@@ -22,23 +22,21 @@ function initGallery(id) {
         dimmer.style.zIndex = originalDimZ;
         // corresponding modal box appears
       });
-
     }
   };
 
-function initGridNav(){
-  const gridElements = document.getElementsByClassName("grid-nav")[0].children;
-  console.log(gridElements)
-  for (let i = 0; i < gridElements.length; i++) {
-    gridElements[i].children[0].addEventListener("mouseover", function(e) {
-      console.log("overr");
-      gridElements[i].children[0].style.animation = "sway 0.7s linear 0s 1";
-      gridElements[i].children[0].style.animationTimingFunction = "cubic-bezier(0,.5,.94,.69)";
-    });
-    gridElements[i].children[0].addEventListener("mouseout", function(e) {
-      gridElements[i].children[0].style.animation = "none";
-    });
-}};
+// function initGridNav(){
+//   const gridElements = document.getElementsByClassName("grid-nav")[0].children;
+//   console.log(gridElements)
+//   for (let i = 0; i < gridElements.length; i++) {
+//     gridElements[i].children[0].addEventListener("mouseover", function(e) {
+//       console.log("overr");
+
+//     });
+//     gridElements[i].children[0].addEventListener("mouseout", function(e) {
+//       gridElements[i].children[0].style.animation = "none";
+//     });
+// }};
 
 
 const body = document.getElementsByTagName("body")[0];
