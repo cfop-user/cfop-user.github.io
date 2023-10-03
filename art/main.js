@@ -5,17 +5,6 @@ function initGallery(id) {
     const originalDimZ = dimmer.style.zIndex
 
     for (let i = 0; i < images.length; i++) {
-      images[i].addEventListener("mouseover", function(e) {
-        dimmer.style.opacity = '0.5';
-        dimmer.style.zIndex = "98";
-        console.log('success')
-      });
-
-      images[i].addEventListener("mouseout", function(e) {
-        dimmer.style.opacity = '0';
-        dimmer.style.zIndex = originalDimZ;
-        console.log('success2')
-      });
 
       images[i].addEventListener("click", function(e) {
         dimmer.style.opacity = '0.5';
@@ -24,19 +13,6 @@ function initGallery(id) {
       });
     }
   };
-
-// function initGridNav(){
-//   const gridElements = document.getElementsByClassName("grid-nav")[0].children;
-//   console.log(gridElements)
-//   for (let i = 0; i < gridElements.length; i++) {
-//     gridElements[i].children[0].addEventListener("mouseover", function(e) {
-//       console.log("overr");
-
-//     });
-//     gridElements[i].children[0].addEventListener("mouseout", function(e) {
-//       gridElements[i].children[0].style.animation = "none";
-//     });
-// }};
 
 
 const body = document.getElementsByTagName("body")[0];

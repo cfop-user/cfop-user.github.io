@@ -77,9 +77,10 @@ body {
 	overflow: scroll;
 }
 
-main {
+.hide {
 	display: none;
 }
+
 
 .mini-underline {
 	border-width: 0 0 2px;
@@ -413,12 +414,15 @@ nav a:hover {
 	height: 100%;
 	opacity: 60%;
 	object-fit: cover;
-	transform: scale(0.01);
-	transition: background-size 0.4s,z-index,0.1s, opacity 0.5s;
+	transition: background-size 0.4s, z-index,0.1s, opacity 0.5s;
 	/* transition-delay: 0.5s; */
 	transition-timing-function: ease-out;
 }
 
+.gallery div:hover #dimmer {
+    opacity: '0.5';
+    z-index:"98";
+}
 
 
 .gallery div:hover{
@@ -432,9 +436,10 @@ nav a:hover {
 .gallery img {
 	object-fit: contain;
 	flex-grow: 0;
+	opacity: 1;
 	max-width: 100%;
 	max-height: 100%;
-	animation: grow-in 2s ease 2s;
+	animation: grow-in 0.4s ease-out 0.5;
 	animation-iteration-count: 1;
 }
 
@@ -511,11 +516,11 @@ nav a:hover {
 
 @keyframes grow-in {
 	0% {
-		width: 0%;
-		height: 0%;
+		opacity: 0.3;
+		transform: scale(0.01);
 	}
 	100% {
-		width: 0%;
-		height: 0%;
+		opacity: 1;
+		transform: scale(1);
 	}
 }
