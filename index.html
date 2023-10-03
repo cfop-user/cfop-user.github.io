@@ -4,59 +4,46 @@
 		<title>Home</title>
 		<link id = "default" href="style.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" type="image/x-icon" href=""/>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Poppins">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans:wght@200;300;400;500;600;800|Poppins">
 		<script src="https://kit.fontawesome.com/a4347c6d31.js" crossorigin="anonymous"></script>
 	</head>
-	<body data-theme = "main">
 
-		<header class = "mainhead">
-			<a href="/index.html" class = "header-logo"><i class="fa fa-home"></i></a>
-			<p class = "header-text">My site :)</p>
-		</header> 
-		
-		<div class = "grid-nav">
-			<a id = "chess-icon-box" href ="/chess/main.html">
-				<i class="fa fa-chess chess-icon nav-icon"></i>
-				<span>Chess</span>
-			</a>
-			<a id = "art-icon-box" href ="/art/art.html">
-				<i class="fa fa-brush art-icon nav-icon"></i>
-				<span>Art</span>
-			</a>
-			<a id = "cube-icon-box" href ="/cubing/main.html">
-				<i class="fa fa-cubes cube-icon nav-icon"></i>
-				<span>Cubing</span>
-			</a>	
-			<script src="art/main.js"></script>
-			<script>initGridNav();</script>		
-		</div>
-		
-		<main class = "hide">
-			<!-- modal -->
-			<div id = "modal" class = "modal">
-				<div id = "mod-content" class = "modalcontent">
-					<span class = "close">&#10006</span>
-					<div class = "themebuttons">
-						<button class = "theme-button" onclick ="dark()"><b>Dark Theme</b></button>
-						<button class = "theme-button" onclick ="defa()"><b>Default Theme</b></button>
+	<body data-theme = "main">
+		<nav>
+			<div class = "main-links">
+				<a>Art</a>
+				<a>Programming</a>
+				<a>Chess</a>
+				<a>Cubing</a>
+			</div>
+		</nav>
+
+		<div class = "hero-wrapper">
+			<div class = "hero">
+				<div class = "hero-content">
+					<h1>Welcome to the world of Ben.</h1>
+					<p> Programming, Chess, Art, who knows what else. you're in for a <span class = "emphasis">treat!</span> </p>
+					<div class = "hero-links">
+						<a class = "link-button">My Code</a>
+						<a class = "link-button">My Art </a>
 					</div>
 				</div>
 			</div>
+		</div>
 
-	
-			<!-- <button id = "theme-button" class = "theme-button"><b>Themes</b></button> -->
-		
+		<div class = "more-stuff">
+			<h1>16 years of creativity (and counting)</h1>
+			<p>I hope this portfolio has words which word sometimes</p>
+		</div>
 
-
-			<div>
-				<h2>
-					Need to make you scroll down so here, have some text:
-				</h2>
-				<p class = "mainbody-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet auctor felis, quis viverra nisi. Suspendisse potenti. Pellentesque gravida sagittis quam ornare fringilla. Vivamus tincidunt porta <span class ="highlight">consectetur. Nulla sapien dui, mattis nec ornare non, pretium vitae arcu.</span> Ut varius justo et maximus lobortis. Nam scelerisque ante sapien, quis scelerisque est dapibus ac. Phasellus dignissim fermentum turpis, vel porttitor nisl elementum et. Curabitur ac diam a sem tempus euismod in in diam. Integer ac tempus odio, in vehicula odio.
-				</p>
+		<footer>
+			<div class = "logo"></div>
+			<p class = "subtitle">Copyright © 2023 NonExistent, Inc.</p>
+			<div class = "footer-links">
+				<a href = "/">Legal Stuff</a>
+				<a href = "/">Privacy Policy</a>
+				<a href = "/">Security</a>
 			</div>
-		</main>
-
+		</footer>
   </body>
 </html>
