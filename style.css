@@ -6,8 +6,7 @@
 	--secondary-font: "Poppins";
 	--secondary-font-color: rgb(20, 6, 22);
 	--nav-color: #6565809f;
-	--nav-color-hover: #e0e0e044;
-	--emphasis: #e67171;
+	--emphasis: #ff8a8a;
 	--footer-color: var(--secondary-bg-color);
 	--link-hover: #7c0034;
 }
@@ -33,7 +32,7 @@ nav {
 	background-color: var(--nav-color);
 	font-weight: 600;
 	font-size: var(--nav-font-size);
-	backdrop-filter: blur(1px);
+	backdrop-filter: blur(3px);
 }
 
 .main-links {
@@ -50,8 +49,7 @@ nav {
 	transition-timing-function: ease-out;
 }
 .main-links a:hover {
-	background-color: var(--nav-color-hover);
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(4px) saturate(80%) brightness(1.3);
 }
 
 /* hero */
@@ -60,7 +58,7 @@ nav {
 	overflow: hidden;
 	z-index: 4;
 	height: 100%;
-	padding: 11% 5% 5%;
+	padding: 3% 5% 5%;
 	margin: 0;
 	font-size: 1.8rem;
 	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/IMG_20221208_074608_330.jpg");
@@ -115,7 +113,8 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 
 span.emphasis {
 	font-size: larger;
-	color: var(--emphasis)
+	color: var(--emphasis);
+	text-shadow: 2px 2px 6px#160C28;
 }
 
 
@@ -124,12 +123,20 @@ span.emphasis {
 	margin: auto;
 }
 
+.more-stuff h1{
+	color: var(--secondary-bg-color);
+}
+
 footer {
 	box-sizing:border-box;
 	background-color: var(--footer-color);
 	padding: 6% 0;
 	color: var(--secondary-font-color);
 	text-align: center;
+}
+
+footer .logo {
+	font-size: 4rem;
 }
 
 .footer-links {
