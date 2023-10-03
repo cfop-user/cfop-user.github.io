@@ -1,3 +1,3 @@
 # My site
 
-visit [here,](https://www.ben.voklen.com)
+visit [here,](http://www.ben.voklen.com)
