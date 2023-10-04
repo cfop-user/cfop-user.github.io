@@ -5,7 +5,7 @@
 	--secondary-bg-color: #EFCB68;
 	--secondary-font: "Poppins";
 	--secondary-font-color: rgb(20, 6, 22);
-	--nav-color: #6565809f;
+	--nav-color: #65658062;
 	--emphasis: #ff8a8a;
 	--footer-color: var(--secondary-bg-color);
 	--link-hover: #7c0034;
@@ -29,8 +29,9 @@ nav {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	background-color: var(--nav-color);
-	font-weight: 600;
+	/* background-color: var(--nav-color); */
+	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
+	font-weight: 400;
 	font-size: var(--nav-font-size);
 	backdrop-filter: blur(3px);
 }
@@ -45,11 +46,16 @@ nav {
 	text-align: center;
 	text-decoration: none;
 	list-style-type: none;
-	transition: background-color 0.3s, backdrop-filter 0.3s;
+	flex-grow: 5;
+	color: var(--main-font-color);
+	transition: background-color 0.3s, backdrop-filter 0.3s, background-image 0.3s;
 	transition-timing-function: ease-out;
 }
 .main-links a:hover {
 	backdrop-filter: blur(4px) saturate(80%) brightness(1.3);
+	background-color: var(--nav-color);
+	background-image: linear-gradient(rgba(71, 71, 71, 0.329), rgba(2, 2, 2, 0));
+
 }
 
 /* hero */
@@ -77,7 +83,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 }
 
 .hero h1 {
-	font-weight: 800;
+	font-weight: 700;
 	font-size: 3.7rem;
 	font-family: var(--main-font);
 	text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
@@ -93,7 +99,6 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 .hero-content {
 	width: 50%;
 }
-
 
 .hero-links {
 	display: flex;
@@ -122,6 +127,7 @@ span.emphasis {
 .more-stuff {
 	text-align: center;
 	margin: auto;
+	padding: 8% 0;
 }
 
 .more-stuff h1{
@@ -175,10 +181,11 @@ footer .logo {
 @media screen and (max-width: 1000px) {
 	body {
 		font-size: 3rem;
-		height: 100vh
+		height: 100vh;
 	}
 	nav {
 		justify-content: center;
+		background-image: linear-gradient(rgb(32, 30, 32), rgb(32, 30, 32), rgba(2, 2, 2, 0));
 	}
 	.main-links{
 		justify-content: center;
