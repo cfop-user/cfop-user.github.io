@@ -189,11 +189,18 @@ footer .logo {
 	}
 	.main-links{
 		justify-content: center;
+		flex-grow: 2;
 	}
 	.main-links a{
 		padding: 14% 3%;
+		color: var(--main-font-color);
 	}
+	.main-links a:hover {
+		backdrop-filter: none;
+		background-color: var(--nav-color);
+		background-image: none;
 
+	}
 	.hero h1{
 		font-size: 12rem;
 	}
