@@ -7,6 +7,7 @@
 	--secondary-font-color: rgb(20, 6, 22);
 	--nav-color: #65658062;
 	--emphasis: #ff8a8a;
+	--mild-emphasis: #ffacac;
 	--footer-color: var(--secondary-bg-color);
 	--link-hover: #7c0034;
 }
@@ -17,7 +18,7 @@ body {
 	background-color: var(--main-bg-color);
 	font-family: var(--main-font);
 	color: var(--main-font-color);
-	font-size: medium;
+	font-size: 1rem;
 	overflow: scroll;
 }
 
@@ -29,7 +30,7 @@ nav {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
-	/* background-color: var(--nav-color); */
+	background-color: #ffffff1e;
 	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
 	font-weight: 400;
 	font-size: var(--nav-font-size);
@@ -48,8 +49,6 @@ nav {
 	list-style-type: none;
 	flex-grow: 5;
 	color: var(--main-font-color);
-	transition: background-color 0.3s, backdrop-filter 0.3s, background-image 0.3s;
-	transition-timing-function: ease-out;
 }
 .main-links a:hover {
 	backdrop-filter: blur(4px) saturate(80%) brightness(1.3);
@@ -65,7 +64,7 @@ nav {
 	overflow: hidden;
 	z-index: 4;
 	height: 100%;
-	padding: 7% 5% 5%;
+	padding: 17% 5% 5%;
 	margin: 0;
 	font-size: 1.8rem;
 	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/IMG_20221208_074608_330.jpg");
@@ -86,7 +85,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 	font-weight: 700;
 	font-size: 3.7rem;
 	font-family: var(--main-font);
-	text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
+	text-shadow: 2px 2px 20px rgba(0,0,0,0.4);
 }
 
 .hero p {
@@ -107,6 +106,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 }
 
 .link-button {
+	text-align: center;
 	margin: 0 4rem;
 	padding: 0.5rem 0.7rem;
 	display: block;
@@ -122,16 +122,43 @@ span.emphasis {
 	color: var(--emphasis);
 	text-shadow: 2px 2px 6px#160C28;
 }
-
-
-.more-stuff {
-	text-align: center;
-	margin: auto;
-	padding: 8% 0;
+span.mild-emphasis {
+	color: var(--mild-emphasis);
 }
 
-.more-stuff h1{
+.header {
+	text-align: center;
+	margin: auto;
+	padding: 8% 0;	
+	background-image: radial-gradient(circle, #41053e, var(--main-bg-color));
+}
+
+.primary-section {
+	text-align: center;
+	margin: auto 0;
+	padding: 5% 0 2%;
+}
+
+.primary-section-text-wrapper {
+	width: 90%;
+	margin: auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.primary-section-text {
+	font-size: 1.4rem;
+	text-align: center;
+	flex-grow: 0;
+	padding: 2rem
+}
+
+.header h1{
 	color: var(--secondary-bg-color);
+}
+
+.blog-section, .secondary-section{
+	background-color: var(--secondary-bg-color);
 }
 
 footer {
@@ -178,13 +205,14 @@ footer .logo {
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
 
 /* Phones */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
 	body {
 		font-size: 3rem;
 		height: 100vh;
 	}
 	nav {
 		justify-content: center;
+		background-color: #00000000;
 		background-image: linear-gradient(rgb(32, 30, 32), rgb(32, 30, 32), rgba(2, 2, 2, 0));
 	}
 	.main-links{
@@ -192,7 +220,7 @@ footer .logo {
 		flex-grow: 2;
 	}
 	.main-links a{
-		padding: 14% 3%;
+		padding: 10% 3%;
 		color: var(--main-font-color);
 	}
 	.main-links a:hover {
@@ -228,8 +256,18 @@ footer .logo {
 		padding: 25% 5% 5%;
 	}
 
-	.more-stuff{
+	.header {
 		background-image: radial-gradient(circle, #4d0446, var(--main-bg-color));
 		padding: 24% 0;
+	}
+
+	.primary-section{
+		background-color: var(--main-bg-color);
+		padding: 24% 0;
+	}
+
+	.secondary-section{
+		background-color: var(--secondary-bg-color);
+		padding: 24% 0;	
 	}
 }
