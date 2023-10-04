@@ -1,89 +1,64 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>My art :)</title>
-		<!-- <script src = "main.js"></script> -->
-		<!-- <meta http-equiv="refresh" content="111111"> -->
+		<title>Art</title>
 		<link id = "default" href="../style.css" rel="stylesheet" type="text/css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Poppins">
+		<link rel="icon" type="image/x-icon" href=""/>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans:wght@200;300;400;500;600;800|Poppins">
 		<script src="https://kit.fontawesome.com/a4347c6d31.js" crossorigin="anonymous"></script>
 	</head>
 	<body id = "body" data-theme = "main">
-		<div id = "dimmer"></div>
-
-		<header class = "mainhead">
-			<a href="/index.html" class = "header-logo"><i class="fa fa-home"></i></a>
-			<p class = "header-text">M<span class = "mini-underline">y ar</span>t</p>
-		</header> 
-		
-		<main>
-			<div id = "modal" class = "modal">
-				<div id = "mod-content" class = "modalcontent">
-					<span class = "close">&#10006</span>
-					<div class = "themebuttons">
-						<button class = "theme-button" onclick ="dark()"><b>Dark Theme</b></button>
-						<button class = "theme-button" onclick ="defa()"><b>Default Theme</b></button>
-					</div>
-				</div>
+		<nav>
+			<div class = "main-links">
+				<a href = "../">Home</a>
+				<a href = "../art/art.html">Art</a>
+				<a href = "../programming/main.html">Programming</a>
 			</div>
-			
-			<nav>
-				<a href ="..//index.html">Home</a>
-				<a href ="/art/art.html">Art</a>		
-				<a href = "../cubing/main.html">Cubing</a>
-			</nav>
-	
-			<div class = "gallery" id = "portrait-gallery">
-				<div id = "mask">
-					<img src = "images/mask moment.png">
-				</div>
-				<div id = "strandy">
-					<img src = "images/woman with hair.png">
-				</div>
-				<div id = "sleeveless">
-					<img src = "images/actual2.png">
-				</div>
-				<div id = "sketch">
-					<img src = "images/sketch.png">
-				</div>
-				<script src="main.js"></script>
-  				<script>initGallery("portrait-gallery");</script>
-			</div>
+		</nav>
 
-			<div class = "image-info">
-			</div>
+		<div class = "gallery" id = "portrait-gallery">	
+			<img src = "../assets/art/mask moment.png">
+			<img src = "../assets/art/woman with hair.png">
+			<img src = "../assets/art/actual2.png">
+			<img src = "../assets/art/sketch.png">
+			<script src="main.js"></script>
+			<script>initGallery("portrait-gallery");</script>
+		</div>
 
-			<div class = "gallery" id = "landscape-gallery">
-				<div>
-					<img src = "images/bACKGROuUnd.png">
-				</div>
-				<div>
-					<img src = "images/snowy mountain.png">
-				</div>
-				<div>
-					<img src = "images/girl and teddy.png">
-				</div>
-				<div>
-					<img src = "images/gentle blue.png">
-				</div>
-				<div>
-					<img src = "images/oil.png">
-				</div>
-				<div>
-					<img src = "images/sheep hill.png">
-				</div>
-				<script>initGallery("landscape-gallery");</script>
-			</div>
+		<div class = "image-info">
+		</div>
 
+		<div class = "gallery" id = "landscape-gallery">
 			<div>
-				<h2>
-					Need to make you scroll down so here, have some text:
-				</h2>
-				<p class = "mainbody-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet auctor felis, quis viverra nisi. Suspendisse potenti. Pellentesque gravida sagittis quam ornare fringilla. Vivamus tincidunt porta <span class ="highlight">consectetur. Nulla sapien dui, mattis nec ornare non, pretium vitae arcu.</span> Ut varius justo et maximus lobortis. Nam scelerisque ante sapien, quis scelerisque est dapibus ac. Phasellus dignissim fermentum turpis, vel porttitor nisl elementum et. Curabitur ac diam a sem tempus euismod in in diam. Integer ac tempus odio, in vehicula odio.
-				</p>
+				<img src = "../assets/art/bACKGROuUnd.png">
 			</div>
-		</main>
+			<div>
+				<img src = "../assets/art/snowy mountain.png">
+			</div>
+			<div>
+				<img src = "../assets/art/girl and teddy.png">
+			</div>
+			<div>
+				<img src = "../assets/art/gentle blue.png">
+			</div>
+			<div>
+				<img src = "../assets/art/oil.png">
+			</div>
+			<div>
+				<img src = "../assets/art/sheep hill.png">
+			</div>
+			<script>initGallery("landscape-gallery");</script>
+		</div>
+
+		<div>
+			<h2>
+				Need to make you scroll down so here, have some text:
+			</h2>
+			<p class = "mainbody-text">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sit amet auctor felis, quis viverra nisi. Suspendisse potenti. Pellentesque gravida sagittis quam ornare fringilla. Vivamus tincidunt porta <span class ="highlight">consectetur. Nulla sapien dui, mattis nec ornare non, pretium vitae arcu.</span> Ut varius justo et maximus lobortis. Nam scelerisque ante sapien, quis scelerisque est dapibus ac. Phasellus dignissim fermentum turpis, vel porttitor nisl elementum et. Curabitur ac diam a sem tempus euismod in in diam. Integer ac tempus odio, in vehicula odio.
+			</p>
+		</div>
+
 
   </body>
 </html>

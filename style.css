@@ -271,3 +271,22 @@ footer .logo {
 		padding: 24% 0;	
 	}
 }
+
+/* GALLERY */
+.gallery {
+	display: grid;
+	width: 50vw;
+	grid-template-columns: auto auto;
+	gap: 2rem 2rem;
+}
+
+.gallery img{
+	width: 70%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+#landscape-gallery {
+	display: none;
+}
