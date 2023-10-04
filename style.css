@@ -54,11 +54,12 @@ nav {
 
 /* hero */
 .hero {
+	box-sizing:border-box;
 	position: relative;
 	overflow: hidden;
 	z-index: 4;
 	height: 100%;
-	padding: 3% 5% 5%;
+	padding: 7% 5% 5%;
 	margin: 0;
 	font-size: 1.8rem;
 	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/IMG_20221208_074608_330.jpg");
@@ -159,4 +160,62 @@ footer .logo {
 
 .footer-links a:hover {
 	color: var(--link-hover)
+}
+
+/* Media Queries */
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+
+/* Phones */
+@media screen and (max-width: 1000px) {
+	body {
+		font-size: 3rem;
+		height: 100vh
+	}
+	nav {
+		justify-content: center;
+	}
+	.main-links{
+		justify-content: center;
+	}
+	.main-links a{
+		padding: 14% 3%;
+	}
+
+	.hero h1{
+		font-size: 12rem;
+	}
+
+	.hero p {
+		display: block;
+		font-weight: 500;
+		font-size: 5.3rem;
+		width: 100%;
+	}
+	
+	.hero-content {
+		margin: auto;
+		width: 100%;
+	}
+
+	.hero-links {
+		justify-content: center;
+		font-size: 3rem;
+	}
+
+	.hero {
+		background-image: radial-gradient(circle,rgba(109, 69, 96, 0.9), rgba(30, 34, 70, 0.9)), url("assets/IMG_20221208_074608_330.jpg");
+		text-align: center;
+		padding: 25% 5% 5%;
+	}
+
+	.more-stuff{
+		background-image: radial-gradient(circle, #4d0446, var(--main-bg-color));
+		padding: 24% 0;
+	}
 }
