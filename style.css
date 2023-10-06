@@ -2,13 +2,15 @@
 	--main-font: "Josefin Sans";
 	--main-bg-color: #160C28;
 	--main-font-color: white;
-	--secondary-bg-color: #EFCB68;
+	--secondary-bg-color: #331e36;
 	--secondary-font: "Poppins";
-	--secondary-font-color: rgb(20, 6, 22);
+	--secondary-font-color: rgb(214, 211, 214);
 	--nav-color: #65658062;
 	--emphasis: #ff8a8a;
 	--mild-emphasis: #ffacac;
-	--footer-color: var(--secondary-bg-color);
+	--footer-bg-color: #EFCB68;
+	--secondary-heading-color: #EFCB68;
+	--footer-color: rgb(20, 6, 22);
 	--link-hover: #7c0034;
 }
 
@@ -34,7 +36,7 @@ nav {
 	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
 	font-weight: 400;
 	font-size: var(--nav-font-size);
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px) saturate(140%);
 }
 
 .main-links {
@@ -67,13 +69,19 @@ nav {
 	padding: 17% 5% 5%;
 	margin: 0;
 	font-size: 1.8rem;
-	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/IMG_20221208_074608_330.jpg");
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
+#home-hero {
+	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/main\ hero\ image.jpg");
+}
+
+#art-hero {
+	background-image: radial-gradient(rgba(255, 105, 5, 0.349) 0%, rgba(82, 1, 31, 0.705) 50%,rgb(22, 0, 14) 90%), url("assets/art/landscape/oil.png");
+}
 /*TODO: try to add blur to the background image, either by seperating it, by using 
 psuedo elemtents, or by using some sort of backdrop filter  */
 
@@ -114,6 +122,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 	background-color: var(--secondary-bg-color);
 	border-radius: 0.5rem;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+	text-decoration: none;
 }
 
 
@@ -133,15 +142,14 @@ span.mild-emphasis {
 	background-image: radial-gradient(circle, #41053e, var(--main-bg-color));
 }
 
-.primary-section {
+.primary-section, .secondary-section {
 	text-align: center;
-	margin: auto 0;
+	margin: auto;
 	padding: 5% 0 2%;
+	width: 80%;
 }
 
-.primary-section-text-wrapper {
-	width: 90%;
-	margin: auto;
+.primary-section-wrapper, .secondary-section-wrapper {
 	display: flex;
 	flex-direction: row;
 }
@@ -154,18 +162,19 @@ span.mild-emphasis {
 }
 
 .header h1{
-	color: var(--secondary-bg-color);
+	color: var(--secondary-heading-color);
 }
 
-.blog-section, .secondary-section{
+.blog-section-wrapper, .secondary-section-wrapper{
 	background-color: var(--secondary-bg-color);
+	color: var(--secondary-font-color)
 }
 
 footer {
 	box-sizing:border-box;
-	background-color: var(--footer-color);
+	background-color: var(--footer-bg-color);
 	padding: 6% 0;
-	color: var(--secondary-font-color);
+	color: var(--footer-color);
 	text-align: center;
 }
 
@@ -273,19 +282,35 @@ footer .logo {
 }
 
 /* GALLERY */
+
 .gallery {
+	width: 70vw;
+	margin:auto;
+	padding: 3rem;
+}
+
+.gallery-grid {
 	display: grid;
-	width: 50vw;
-	grid-template-columns: auto auto;
+	width: 100%;
+	/* background-color: #fff5; */
+	grid-template-columns: auto auto auto auto;
 	gap: 2rem 2rem;
 }
 
 .gallery img{
-	width: 70%;
+	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
 }
+
+.gallery h1 {
+	text-align: center;
+}
+
+/* .gallery h1:hover {
+	text-align: start;
+} */
 
 #landscape-gallery {
 	display: none;
