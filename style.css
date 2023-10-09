@@ -310,10 +310,17 @@ footer .logo {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
+	transition: filter 0.2s ease-out, transform 0.3s ease-out;
+	filter: sepia(30%) saturate(70%)
+}
+
+.gallery img:hover{
+	filter:sepia(0%) saturate(90%);
+	transform: scale(1.05);
 }
 
 .gallery h1 {
-	text-align: center;
+	text-align: left;
 }
 
 #landscape-gallery {
