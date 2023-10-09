@@ -8,9 +8,12 @@
 	--nav-color: #65658062;
 	--emphasis: #ff8a8a;
 	--mild-emphasis: #ffacac;
-	--footer-bg-color: #EFCB68;
-	--secondary-heading-color: #EFCB68;
+	--accent-color: #EFCB68;
+	--footer-bg-color: var(--accent-color);
+	--secondary-heading-color: var(--accent-color);
+	--button-bg-color: var(--accent-color);
 	--footer-color: rgb(20, 6, 22);
+	--button-color: rgb(20,6,22);
 	--link-hover: #7c0034;
 }
 
@@ -118,8 +121,8 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 	margin: 0 4rem;
 	padding: 0.5rem 0.7rem;
 	display: block;
-	color: var(--secondary-font-color);
-	background-color: var(--secondary-bg-color);
+	color: var(--button-color);
+	background-color: var(--button-bg-color);
 	border-radius: 0.5rem;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
 	text-decoration: none;
@@ -142,7 +145,7 @@ span.mild-emphasis {
 	background-image: radial-gradient(circle, #41053e, var(--main-bg-color));
 }
 
-.primary-section, .secondary-section {
+.primary-section, .secondary-section, .blog-section {
 	text-align: center;
 	margin: auto;
 	padding: 5% 0 2%;
@@ -153,6 +156,10 @@ span.mild-emphasis {
 	display: flex;
 	flex-direction: row;
 }
+
+/* .blog-section-wrapper {
+
+} */
 
 .primary-section-text {
 	font-size: 1.4rem;
@@ -192,8 +199,8 @@ footer .logo {
 .footer-links a {
 	display: block;
 	padding: 0 1rem;
-	color: var(--secondary-font-color);
-	border-right: 2px solid var(--secondary-font-color)
+	color: var(--footer-color);
+	border-right: 2px solid var(--footer-color)
 }
 
 .footer-links a:last-child{
@@ -260,6 +267,7 @@ footer .logo {
 	}
 
 	.hero {
+		background-attachment: scroll;
 		background-image: radial-gradient(circle,rgba(109, 69, 96, 0.9), rgba(30, 34, 70, 0.9)), url("assets/IMG_20221208_074608_330.jpg");
 		text-align: center;
 		padding: 25% 5% 5%;
@@ -308,10 +316,10 @@ footer .logo {
 	text-align: center;
 }
 
-/* .gallery h1:hover {
-	text-align: start;
-} */
-
 #landscape-gallery {
 	display: none;
+}
+
+#jellyfish-image {
+	object-position: 30% 100%;
 }
