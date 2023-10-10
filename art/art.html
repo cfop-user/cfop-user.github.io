@@ -21,18 +21,28 @@
 			<p>Some of the stuff I've made over the years</p>
 		</div>
 
+		<div id = "modal">
+			<div id = "modal-content">
+				<img id ="modal-image" src = "">
+				<div id = "modal-text">
+					<h1 id = "modal-text-header"></h1>
+					<p>Made by Ben.</p>
+				</div>
+			</div>
+		</div>
+
 		<div class = "gallery" id = "portrait-gallery">	
 			<h1>Gallery</h1>
 			<p>(Click on an Image to view full size)</p>
 			<div class = "gallery-grid">
-				<img src = "../assets/art/portrait/high quality.png">
-				<img src = "../assets/art/portrait/rough paint.png">
-				<img src = "../assets/art/portrait/jellyfish.png" id = "jellyfish-image">
-				<img src = "../assets/art/portrait/cropped big.png">
-				<img src = "../assets/art/portrait/beach lady.png">
-				<img src = "../assets/art/portrait/woman with hair.png">
-				<img src = "../assets/art/portrait/comic-like girl.png">
-				<img src = "../assets/art/portrait/mask moment.png">	
+				<img src = "../assets/art/portrait/high quality.png" data-name="Colourful study #1" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/rough paint.png" data-name="Rough Study" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/jellyfish.png" id = "jellyfish-image" data-name="Jellyfish" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/cropped big.png" data-name="Big Guy" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/beach lady.png" data-name="Beach Lady" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/woman with hair.png" data-name="Study #24" onclick="ImageClicked(this)">			
+				<img src = "../assets/art/portrait/comic-like girl.png" data-name="Quite Chill" onclick="ImageClicked(this)">
+				<img src = "../assets/art/portrait/mask moment.png" data-name="Stay Safe" onclick="ImageClicked(this)">	
 			</div>
 			<script src="main.js"></script>
 		</div>
@@ -42,24 +52,20 @@
 
 		<div class = "gallery" id = "landscape-gallery">
 			<div>
-				<img src = "../assets/art/bACKGROuUnd.png">
+				<img src = "../assets/art/landscape/bACKGROuUnd.png">
 			</div>
 			<div>
-				<img src = "../assets/art/snowy mountain.png">
+				<img src = "../assets/art/landscape/snowy mountain.png">
 			</div>
 			<div>
-				<img src = "../assets/art/girl and teddy.png">
+				<img src = "../assets/art/landscape/girl and teddy.png">
 			</div>
 			<div>
-				<img src = "../assets/art/gentle blue.png">
+				<img src = "../assets/art/landscape/oil.png">
 			</div>
 			<div>
-				<img src = "../assets/art/oil.png">
+				<img src = "../assets/art/landscape/sheep hill.png">
 			</div>
-			<div>
-				<img src = "../assets/art/sheep hill.png">
-			</div>
-			<script>initGallery("landscape-gallery");</script>
 		</div>
 
 		<div class = "secondary-section-wrapper">
