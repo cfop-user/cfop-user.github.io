@@ -143,7 +143,15 @@ span.mild-emphasis {
 	text-align: center;
 	margin: auto;
 	padding: 8% 0;	
-	background-image: radial-gradient(circle, #41053e, var(--main-bg-color));
+	/* background-image: radial-gradient(circle, #41053e, var(--main-bg-color)); */
+	--s: 10vh; /* control the size */
+	
+	--_g: #421d42 90deg,#0000 90.5deg;
+	background:
+		conic-gradient(from -45deg,var(--_g)),
+		conic-gradient(from 135deg,var(--_g)) calc(var(--s)/2) 0,
+		#3b0339;
+	background-size: var(--s) var(--s);		  
 }
 
 .primary-section, .secondary-section, .blog-section {
@@ -336,14 +344,22 @@ footer .logo {
 	width: 100%; 
 	height: 100%; 
 	overflow: auto; 
-	background-color: rgba(0, 0, 0, 0); 
-	backdrop-filter: none;
-	transition: transform 0.3s, backdrop-filter 5s, background-color 5s;
+	background-color: rgba(0, 0, 0, 0);
+	transition: all 5s;
 }
-/*TODO: make modal come in from bottom  */
+
+#modal.darkened-modal {
+	backdrop-filter: blur(5px) saturate(40%);
+	background-color: rgba(0, 0, 0, 0.486);	
+}
+
+#modal.closed {
+	display: none;
+}
+
 #modal-content {
 	display: flex;
-	flex-direction: row;
+	flex-direction: row;;
 	margin: 2% auto;
 	padding: 2%;
 	background-color: var(--modal-card-bg-color);
@@ -358,14 +374,35 @@ footer .logo {
 	object-position: center;
 }
 
-#modal-text {
-	margin: 0 5%
+.modal-head {
+	display: flex;
+	flex-direction: row;
+	width: 100%
 }
 
-#modal-text p {
+.modal-close-button {
+	display: block;
+	margin: 0;
+	color: #aaa;
+	font-size: 28px;
+	font-weight: bold;
+
+}
+
+#modal-text {
+	flex-grow: 0.9;
+	padding: 0 3%;
+}
+
+#modal-text-header {
+	margin: 1% 0;
+	flex-grow: 2;
+}
+
+#modal-description {
 	font-size: x-large;
 }
 
-#modal.closed {
-	display: none;
+span.person {
+	text-align: right;
 }
