@@ -18,6 +18,25 @@ function OverlayClicked() {
 	modal.classList.remove("darkened-modal");
 }
 
+const header = document.querySelector('.header');
+header.onmousedown = e => {
+	console.log("working")
+	mousePosition = e.clientY;
+	console.log(mousePosition);
+	console.log(header)
+	header.style.setProperty('--size', String(mousePosition)+"px");
+}
+// header.onmousemove = e => {
+// 	console.log("working")
+// 	mousePosition = e.clientY;
+// 	console.log(mousePosition);
+// 	console.log(header)
+// 	header.style.setProperty('--size', String(mousePosition)+"px");
+// }
+
+
+
+
 document.addEventListener(
 	"click",
 	function(event) {
@@ -29,4 +48,6 @@ document.addEventListener(
 		}
 	},
 	false
-  )
+)
+
+

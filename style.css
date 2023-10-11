@@ -143,15 +143,42 @@ span.mild-emphasis {
 	text-align: center;
 	margin: auto;
 	padding: 8% 0;	
-	/* background-image: radial-gradient(circle, #41053e, var(--main-bg-color)); */
-	--s: 10vh; /* control the size */
 	
-	--_g: #421d42 90deg,#0000 90.5deg;
+	--size: 34px; /* control the size (the circle diameter) */
+	--yellow: #ECBE13;
+	--teal: #309292;
+	--pink: #ff2faf;
+	--c4: #f7623d;
+	--main-gradient: radial-gradient(calc(var(--size)/2),var(--yellow) 97%,#0000);
+	--x-offset: 0px;
+	--y-offset: 0px;
+	--gradient-1-x: (2*var(--size));
+	--gradient-1-y: (2*var(--size));
+	
 	background:
-		conic-gradient(from -45deg,var(--_g)),
-		conic-gradient(from 135deg,var(--_g)) calc(var(--s)/2) 0,
-		#3b0339;
-	background-size: var(--s) var(--s);		  
+		var(--main-gradient),
+		var(--main-gradient) calc(var(--gradient-1-x) + var(--x-offset)) calc(var(--gradient-1-y) + var(--y-offset)),
+
+		repeating-conic-gradient(
+			from 45deg,
+			#0000 0 25%,var(--pink) 0 50%
+		) calc(-.707*var(--size)) calc(-.707*var(--size)),
+
+		repeating-linear-gradient(
+			135deg,
+			var(--teal) calc(var(--size)/-2) calc(var(--size)/2),
+			var(--c4) 0 calc(2.328*var(--size))
+		);
+
+
+	background-size: calc(4*var(--size)) calc(4*var(--size));
+	/* 
+		0.707 = sqrt(2)/2
+		2.328 = 2*sqrt(2) - .5
+		*/
+	  
+
+	background-attachment: fixed;	  
 }
 
 .primary-section, .secondary-section, .blog-section {
