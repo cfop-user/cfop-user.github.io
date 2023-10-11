@@ -328,7 +328,7 @@ footer .logo {
 }
 
 #modal {
-	display: none;
+	display: block;
 	position: fixed;
 	z-index: 99; 
 	left: 0;
@@ -340,7 +340,7 @@ footer .logo {
 	backdrop-filter: none;
 	transition: transform 0.3s, backdrop-filter 5s, background-color 5s;
 }
-
+/*TODO: make modal come in from bottom  */
 #modal-content {
 	display: flex;
 	flex-direction: row;
@@ -364,4 +364,8 @@ footer .logo {
 
 #modal-text p {
 	font-size: x-large;
+}
+
+#modal.closed {
+	display: none;
 }
