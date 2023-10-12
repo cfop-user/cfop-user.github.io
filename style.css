@@ -40,7 +40,7 @@ nav {
 	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
 	font-weight: 400;
 	font-size: var(--nav-font-size);
-	backdrop-filter: blur(3px) saturate(180%);
+	backdrop-filter: blur(3px) saturate(80%);
 }
 
 .main-links {
