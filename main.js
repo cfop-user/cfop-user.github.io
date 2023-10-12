@@ -5,10 +5,14 @@ function ImageClicked(image){
 	modalDescription = document.getElementById("modal-description");
 	modal.classList.add("darkened-modal");
 	modal.classList.remove("closed");
-
 	modalImage.src = image.src;
 	modalHeader.innerHTML = image.getAttribute("data-name");
+
+	if (!image.hasAttribute("data-description")){
+		modalDescription.innerHTML = "Made by Ben."
+	} else {
 	modalDescription.innerHTML = image.getAttribute("data-description")
+	}
 
 }
 
@@ -18,8 +22,22 @@ function OverlayClicked() {
 	modal.classList.remove("darkened-modal");
 }
 
-const header = document.querySelector('.header');
+document.addEventListener(
+	"click",
+	function(event) {
+		console.log(event)
+		modal = document.getElementById("modal");
+		if (
+			event.target.matches("#modal")
+		) {
+			modal.classList.toggle("closed");
+		}
+	},
+	false
+)
 
+const header = document.querySelector('.header'); 
+// Need to add something to not crash when it returns null
 header.addEventListener(
 	"mousedown",
 	function(e) {
@@ -44,19 +62,6 @@ header.addEventListener(
 		lastOffset = parseFloat(header.dataset.lastOffset);
 		header.dataset.lastOffset = getComputedStyle(header).getPropertyValue('--background-offset');
 	}
-)
-
-document.addEventListener(
-	"click",
-	function(event) {
-		modal = document.getElementById("modal");
-		if (
-			event.target.matches("#modal")
-		) {
-			modal.classList.toggle("closed");
-		}
-	},
-	false
 )
 
 

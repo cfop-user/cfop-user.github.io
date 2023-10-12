@@ -40,7 +40,7 @@ nav {
 	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
 	font-weight: 400;
 	font-size: var(--nav-font-size);
-	backdrop-filter: blur(3px) saturate(140%);
+	backdrop-filter: blur(3px) saturate(180%);
 }
 
 .main-links {
@@ -332,13 +332,14 @@ footer .logo {
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	transition: filter 0.2s ease-out, transform 0.3s ease-out;
-	filter: sepia(10%) saturate(80%)
+	transition: all 0.3s ease-out;
+	filter: sepia(10%) saturate(80%);
 }
 
 .gallery img:hover{
-	filter:sepia(0%) saturate(90%);
+	filter: sepia(0%) saturate(90%);
 	transform: scale(1.05);
+	box-shadow: 0px 0px 42px rgb(0, 0, 0);
 }
 
 .gallery h1 {
@@ -367,8 +368,8 @@ footer .logo {
 }
 
 #modal.darkened-modal {
-	backdrop-filter: blur(5px) saturate(40%);
-	background-color: rgba(0, 0, 0, 0.486);	
+	backdrop-filter: blur(15px) saturate(0%);
+	background-color: rgba(0, 0, 0, 0.2);	
 }
 
 #modal.closed {
@@ -390,6 +391,7 @@ footer .logo {
 	height: 100%;
 	object-fit: contain;
 	object-position: center;
+	box-shadow: 0px 0px 22px rgba(0,0,0,0.7);
 }
 
 .modal-head {
