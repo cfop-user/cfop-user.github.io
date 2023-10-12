@@ -19,23 +19,32 @@ function OverlayClicked() {
 }
 
 const header = document.querySelector('.header');
-header.onmousedown = e => {
-	console.log("working")
-	mousePosition = e.clientY;
-	console.log(mousePosition);
-	console.log(header)
-	header.style.setProperty('--size', String(mousePosition)+"px");
-}
-// header.onmousemove = e => {
-// 	console.log("working")
-// 	mousePosition = e.clientY;
-// 	console.log(mousePosition);
-// 	console.log(header)
-// 	header.style.setProperty('--size', String(mousePosition)+"px");
-// }
 
-
-
+header.addEventListener(
+	"mousedown",
+	function(e) {
+		header.dataset.mouseDownAt = e.clientX;
+	}
+)
+header.addEventListener(
+	"mousemove",
+	function(event) {
+		if (header.dataset.mouseDownAt === "0") return;
+		console.log("working")
+		lastOffset = parseFloat(header.dataset.lastOffset);
+		mouseDelta = parseFloat(header.dataset.mouseDownAt) - event.clientX;
+		header.style.setProperty('--background-offset', String(mouseDelta + lastOffset)  +'px');
+	}
+)
+header.addEventListener(
+	"mouseup",
+	function(e){
+		header.dataset.mouseDownAt = "0";
+		mouseDelta = parseFloat(header.dataset.mouseDownAt) - e.clientX;
+		lastOffset = parseFloat(header.dataset.lastOffset);
+		header.dataset.lastOffset = getComputedStyle(header).getPropertyValue('--background-offset');
+	}
+)
 
 document.addEventListener(
 	"click",

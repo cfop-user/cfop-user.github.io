@@ -143,43 +143,34 @@ span.mild-emphasis {
 	text-align: center;
 	margin: auto;
 	padding: 8% 0;	
-	
-	--size: 34px; /* control the size (the circle diameter) */
-	--yellow: #ECBE13;
-	--teal: #309292;
-	--pink: #ff2faf;
-	--c4: #f7623d;
-	--main-gradient: radial-gradient(calc(var(--size)/2),var(--yellow) 97%,#0000);
-	--x-offset: 0px;
-	--y-offset: 0px;
-	--gradient-1-x: (2*var(--size));
-	--gradient-1-y: (2*var(--size));
-	
-	background:
-		var(--main-gradient),
-		var(--main-gradient) calc(var(--gradient-1-x) + var(--x-offset)) calc(var(--gradient-1-y) + var(--y-offset)),
 
-		repeating-conic-gradient(
-			from 45deg,
-			#0000 0 25%,var(--pink) 0 50%
-		) calc(-.707*var(--size)) calc(-.707*var(--size)),
-
-		repeating-linear-gradient(
-			135deg,
-			var(--teal) calc(var(--size)/-2) calc(var(--size)/2),
-			var(--c4) 0 calc(2.328*var(--size))
-		);
-
-
-	background-size: calc(4*var(--size)) calc(4*var(--size));
-	/* 
-		0.707 = sqrt(2)/2
-		2.328 = 2*sqrt(2) - .5
-		*/
-	  
-
-	background-attachment: fixed;	  
+	--background-offset: 100vw;
+	background-image: 
+	repeating-linear-gradient(
+		45deg,
+		rgba(138, 29, 111, 0.678) 0rem 7rem,
+		rgb(50, 20, 78) 7rem 8rem
+	),
+	radial-gradient(
+		rgba(0,0,0,1),rgba(255, 255, 255, 0)
+	);
+	background-position: var(--background-offset);
+	background-attachment: fixed;
+	background-size: 500% 100%;	  
 }
+
+/* nav + .header {
+	background-image: 
+    repeating-linear-gradient(
+    	-45deg, 
+		, 
+    	1rem,
+      #ccc 1rem,
+      #ccc 2rem
+    );
+	background-size: 200% 200%;
+	animation: barberpole 10s linear infinite;
+} */
 
 .primary-section, .secondary-section, .blog-section {
 	text-align: center;
