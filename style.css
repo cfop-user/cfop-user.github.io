@@ -314,7 +314,7 @@ footer .logo {
 /* GALLERY */
 
 .gallery {
-	width: 70vw;
+	width: 50vw;
 	margin:auto;
 	padding: 3rem;
 }
@@ -363,13 +363,29 @@ footer .logo {
 	width: 100%; 
 	height: 100%; 
 	overflow: auto; 
+
 	background-color: rgba(0, 0, 0, 0);
+	backdrop-filter: blur(15px) saturate(100%);
 	transition: all 5s;
 }
 
 #modal.darkened-modal {
-	backdrop-filter: blur(15px) saturate(0%);
+	backdrop-filter: blur(15px) saturate(20%);
 	background-color: rgba(0, 0, 0, 0.2);	
+}
+
+#test {
+	font-size: 100px;
+	background-color: blueviolet;
+	transition: all 1s;
+}
+
+#test.hovered {
+	background-color: red;
+}
+
+#test.unhovered {
+	font-size: 30px;
 }
 
 #modal.closed {
@@ -378,14 +394,25 @@ footer .logo {
 
 #modal-content {
 	display: flex;
+	position: relative;
 	flex-direction: row;;
 	margin: 2% auto;
 	padding: 2%;
 	background-color: var(--modal-card-bg-color);
 	box-shadow: 0px 0px 22px rgba(0,0,0,0.7);
-	width: 80%;
+	width: 60%;
 	height: 80%;
+	transition: all 4s;
+	filter: none;
+	transform: none;
 }
+
+#modal-content.closed {
+	transition: all 4s;
+	filter: opacity(0);
+	transform: translate(30px);
+}
+
 
 #modal-content img {
 	height: 100%;
@@ -394,19 +421,23 @@ footer .logo {
 	box-shadow: 0px 0px 22px rgba(0,0,0,0.7);
 }
 
-.modal-head {
-	display: flex;
-	flex-direction: row;
-	width: 100%
+.modal-close-button {
+	position:absolute;
+	top:0;
+	right:0;
+	margin: 0 2%;
+	height: max-content;
+	border: none;
+	color: rgba(255, 255, 255, 0.575);
+	background-color: #0000;
+	font-size: 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.2s ease-out;
 }
 
-.modal-close-button {
-	display: block;
-	margin: 0;
-	color: #aaa;
-	font-size: 28px;
-	font-weight: bold;
-
+.modal-close-button:hover{
+	color: #fff
 }
 
 #modal-text {
@@ -415,8 +446,7 @@ footer .logo {
 }
 
 #modal-text-header {
-	margin: 1% 0;
-	flex-grow: 2;
+	margin: 5% 0;
 }
 
 #modal-description {
@@ -426,3 +456,4 @@ footer .logo {
 span.person {
 	text-align: right;
 }
+

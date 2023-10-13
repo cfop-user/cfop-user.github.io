@@ -1,67 +1,106 @@
+const modal = document.getElementById("modal");
+modalImage = document.getElementById("modal-image");
+modalHeader = document.getElementById("modal-text-header");
+modalDescription = document.getElementById("modal-description");
+const modalContent = document.querySelector('#modal-content'); 
+
 function ImageClicked(image){
-	modal = document.getElementById("modal");
-	modalImage = document.getElementById("modal-image");
-	modalHeader = document.getElementById("modal-text-header");
-	modalDescription = document.getElementById("modal-description");
-	modal.classList.add("darkened-modal");
-	modal.classList.remove("closed");
+	OpenModal()
 	modalImage.src = image.src;
 	modalHeader.innerHTML = image.getAttribute("data-name");
-
 	if (!image.hasAttribute("data-description")){
 		modalDescription.innerHTML = "Made by Ben."
 	} else {
 	modalDescription.innerHTML = image.getAttribute("data-description")
 	}
-
 }
 
-function OverlayClicked() {
-	modal = document.getElementById("modal");
-	modal.classList.add("closed");
+function CloseModal() {
 	modal.classList.remove("darkened-modal");
+	modal.classList.add("closed");
+	modalContent.classList.add("closed")
+}
+
+function OpenModal(){
+	modal.classList.remove("closed");
+	modal.classList.add("darkened-modal");
+	modalContent.classList.remove("closed")
 }
 
 document.addEventListener(
 	"click",
 	function(event) {
-		console.log(event)
-		modal = document.getElementById("modal");
 		if (
-			event.target.matches("#modal")
+			event.target.matches("#modal") || event.target.matches(".modal-close-button")
 		) {
-			modal.classList.toggle("closed");
+			CloseModal()
 		}
 	},
 	false
 )
 
 const header = document.querySelector('.header'); 
-// Need to add something to not crash when it returns null
-header.addEventListener(
-	"mousedown",
-	function(e) {
-		header.dataset.mouseDownAt = e.clientX;
-	}
-)
-header.addEventListener(
-	"mousemove",
-	function(event) {
-		if (header.dataset.mouseDownAt === "0") return;
-		console.log("working")
-		lastOffset = parseFloat(header.dataset.lastOffset);
-		mouseDelta = parseFloat(header.dataset.mouseDownAt) - event.clientX;
-		header.style.setProperty('--background-offset', String(mouseDelta + lastOffset)  +'px');
-	}
-)
-header.addEventListener(
-	"mouseup",
-	function(e){
-		header.dataset.mouseDownAt = "0";
-		mouseDelta = parseFloat(header.dataset.mouseDownAt) - e.clientX;
-		lastOffset = parseFloat(header.dataset.lastOffset);
-		header.dataset.lastOffset = getComputedStyle(header).getPropertyValue('--background-offset');
-	}
-)
+if (header != null) {
+	SetupHeader()
+}
 
+function SetupHeader() {
+	header.addEventListener(
+		"mousedown",
+		function(e) {
+			header.dataset.mouseDownAt = e.clientX;
+		}
+	)
+	header.addEventListener(
+		"mousemove",
+		function(event) {
+			if (header.dataset.mouseDownAt === "0") return;
+			lastOffset = parseFloat(header.dataset.lastOffset);
+			mouseDelta = parseFloat(header.dataset.mouseDownAt) - event.clientX;
+			header.style.setProperty('--background-offset', String(mouseDelta + lastOffset)  +'px');
+		}
+	)
+	header.addEventListener(
+		"mouseup",
+		function(){
+			header.dataset.mouseDownAt = "0";
+			header.dataset.lastOffset = getComputedStyle(header).getPropertyValue('--background-offset');
+		}
+	)
+}
 
+const galleryGrid =  document.querySelector('.gallery-grid');
+if (galleryGrid != null){
+	setupGalleryGrid()
+}
+function setupGalleryGrid() {
+	for (const Image of galleryGrid.children) {
+		Image.draggable = false
+		Image.addEventListener(
+			"click",
+			function(){ImageClicked(Image)}
+		)
+	}
+}
+
+const test = document.querySelector('#test'); 
+if (test != null) {
+	setupTest()
+}
+
+function setupTest(){
+	test.addEventListener(
+		"mouseover",
+		function(){
+			test.classList.add("hovered");
+			test.classList.remove("unhovered")
+		}	
+	)
+	test.addEventListener(
+		"mouseout",
+		function(){
+			test.classList.add("unhovered");
+			test.classList.remove("hovered");
+		}	
+	)
+}
