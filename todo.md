@@ -1,0 +1,1 @@
+i need to move those fancy swirls to the footer not the object that happens to be before the footer, if thet makes sense
