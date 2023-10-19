@@ -4,7 +4,7 @@
 		<title>Art</title>
 		<link id = "default" href="../style.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" type="image/x-icon" href=""/>
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans:wght@200;300;400;500;600;800|Poppins">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin Sans:wght@100;200;300;400;500;600;800|Poppins">
 		<script src="https://kit.fontawesome.com/a4347c6d31.js" crossorigin="anonymous"></script>
 	</head>
 	<body id = "body" data-theme = "main">
@@ -16,12 +16,7 @@
 			</div>
 		</nav>
 
-		<div class = "hero" id = "art-hero">
-			<h1>My art</h1>
-			<p>Some of the stuff I've made over the years</p>
-		</div>
-
-		<div id = "modal" class = "closed">
+		<section id = "modal" class = "closed">
 			<div id = "modal-content">	
 				<button class="modal-close-button">&times;</button>
 				<img draggable="false" id ="modal-image" src = "">
@@ -30,28 +25,34 @@
 					<p id="modal-description">Made by Ben.</p>
 				</div>
 			</div>
-		</div>
+		</section>
 
-		<div class = "gallery" id = "portrait-gallery">	
+		<section class = "hero" id = "art-hero">
+			<h1>My art</h1>
+			<p>Some of the stuff I've made over the years</p>
+		</section>
+
+
+		<section class = "gallery" id = "portrait-gallery">	
 			<h1>Gallery</h1>
 			<p>(Click on an Image to view full size)</p>
 			<div class = "gallery-grid">
-				<img src = "../assets/art/portrait/rough paint.png" data-name="Rough Study" data-description="I did this one quite a while back. Happy with how it turned out.">
-				<img src = "../assets/art/portrait/high quality.png" data-name="Colourful study #1">				
-				<img src = "../assets/art/portrait/rendern.png" data-name="Study #24">			
+				<img src = "../assets/art/portrait/rough paint.png" data-name="Rough Study" data-description="This was a new approach for me. I tried keeping solid brush strokes, especially in the hair.">
+				<img src = "../assets/art/portrait/high quality.png" data-name="Colourful study #1" data-description="lighting! I've never tried using such a bold pallete so I'm glad it worked out in the end :)">				
+				<img src = "../assets/art/portrait/rendern.png" data-name="Study #24" data-description="Experimented with softer brushes, but kept fairly visible shapes for lights and darks.">			
 				<img src = "../assets/art/portrait/jellyfish.png" id = "jellyfish-image" data-name="Jellyfish">
-				<img src = "../assets/art/portrait/cropped big.png" data-name="Big Guy">
+				<img src = "../assets/art/portrait/cropped big.png" data-name="Big Guy" data-description="Comic influence here">
 				<img src = "../assets/art/portrait/beach lady.png" data-name="Beach Lady">
-				<img src = "../assets/art/portrait/comic-like girl.png" data-name="Quite Chill">
-				<img src = "../assets/art/portrait/mask moment.png" data-name="Stay Safe">	
+				<img src = "../assets/art/portrait/comic-like girl.png" data-name="Quite Chill" data-description="Comic influence here">
+				<img src = "../assets/art/portrait/mask moment.png" data-name="Victorian Covid?">	
 			</div>
 
-		</div>
+		</section>
 
-		<div class = "image-info">
-		</div>
+		<section class = "image-info">
+		</section>
 
-		<div class = "gallery" id = "landscape-gallery">
+		<section class = "gallery" id = "landscape-gallery">
 			<div>
 				<img src = "../assets/art/landscape/bACKGROuUnd.png">
 			</div>
@@ -67,9 +68,9 @@
 			<div>
 				<img src = "../assets/art/landscape/sheep hill.png">
 			</div>
-		</div>
+		</section>
 
-		<div class = "secondary-section-wrapper">
+		<section class = "secondary-section-wrapper">
 			<div class = "secondary-section">
 				<h1>
 					Need to make you scroll down so here, have some text:
@@ -78,7 +79,12 @@
 					I'm yet to settle for a specific art style, so a lot of these are very different from each other, but I like them.
 				</p>
 			</div>
-		</div>
+			<div class="custom-shape-divider-bottom-1697750374">
+				<svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+					<path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+				</svg>
+			</div>
+		</section>
 
 		<footer>
 			<div class = "logo">LOGO</div>

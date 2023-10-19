@@ -1,5 +1,21 @@
+@font-face {
+	font-family: mainFont;
+	src: url("assets/fonts/Josefin_Sans/static/JosefinSans-Medium.ttf");
+	font-weight: 400;
+}
+@font-face {
+	font-family: mainFont;
+	src: url("assets/fonts/Josefin_Sans/static/JosefinSans-SemiBold.ttf");
+	font-weight: 600;
+}
+@font-face {
+	font-family: mainFont;
+	src: url("assets/fonts/Josefin_Sans/static/JosefinSans-Light.ttf");
+	font-weight: 300;
+}
+
 [data-theme="main"] {
-	--main-font: "Josefin Sans";
+	--main-font: mainFont;
 	--main-bg-color: #160C28;
 	--main-font-color: white;
 	--secondary-bg-color: #331e36;
@@ -16,6 +32,9 @@
 	--button-color: rgb(20,6,22);
 	--link-hover: #7c0034;
 	--modal-card-bg-color: #331e36;
+	--bold: 600;
+	--medium: 400;
+	--light: 300;
 }
 
 body {
@@ -38,7 +57,7 @@ nav {
 	flex-direction: row;
 	background-color: #ffffff1e;
 	background-image: linear-gradient(rgba(32, 30, 32, 0.397),), rgba(2, 2, 2, 0);
-	font-weight: 400;
+	font-weight: var(--medium);
 	font-size: var(--nav-font-size);
 	backdrop-filter: blur(3px) saturate(80%);
 }
@@ -63,7 +82,11 @@ nav {
 
 }
 
-/* hero */
+section {
+	position: relative;
+}
+
+
 .hero {
 	box-sizing:border-box;
 	position: relative;
@@ -94,7 +117,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 }
 
 .hero h1 {
-	font-weight: 700;
+	font-weight: var(--bold);
 	font-size: 3.7rem;
 	font-family: var(--main-font);
 	text-shadow: 2px 2px 20px rgba(0,0,0,0.4);
@@ -102,7 +125,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 
 .hero p {
 	display: block;
-	font-weight: 500;
+	font-weight: var(--bold);
 	font-size: 2.3rem;
 	width: 90%;
 }
@@ -114,7 +137,7 @@ psuedo elemtents, or by using some sort of backdrop filter  */
 .hero-links {
 	display: flex;
 	flex-direction: row;
-	font-weight:200;
+	font-weight: var(--medium);
 }
 
 .link-button {
@@ -175,10 +198,9 @@ span.mild-emphasis {
 .primary-section, .secondary-section, .blog-section {
 	text-align: center;
 	margin: auto;
-	padding: 5% 0 2%;
+	padding: 5% 0 10%;
 	width: 80%;
 }
-
 .primary-section-wrapper, .secondary-section-wrapper {
 	display: flex;
 	flex-direction: row;
@@ -202,6 +224,26 @@ span.mild-emphasis {
 .blog-section-wrapper, .secondary-section-wrapper{
 	background-color: var(--secondary-bg-color);
 	color: var(--secondary-font-color)
+}
+
+.custom-shape-divider-bottom-1697750374 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1697750374 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1vw);
+	height: 100px;
+}
+
+.custom-shape-divider-bottom-1697750374 .shape-fill {
+    fill: var(--footer-bg-color);
 }
 
 footer {
@@ -273,7 +315,7 @@ footer .logo {
 
 	.hero p {
 		display: block;
-		font-weight: 500;
+		font-weight: var(--medium);
 		font-size: 5.3rem;
 		width: 100%;
 	}
@@ -309,6 +351,8 @@ footer .logo {
 		background-color: var(--secondary-bg-color);
 		padding: 24% 0;	
 	}
+
+
 }
 
 /* GALLERY */
@@ -343,6 +387,7 @@ footer .logo {
 }
 
 .gallery h1 {
+	font-size: 4rem;
 	text-align: left;
 }
 
@@ -365,7 +410,7 @@ footer .logo {
 	overflow: auto; 
 	background-color: #0000;
 	backdrop-filter: blur(0px) saturate(100%);
-	transition: background-color 2s ease-in, backdrop-filter 0.3s, height 0s linear 0s ;
+	transition: background-color 0.4s ease-in, backdrop-filter 0.3s, height 0s linear 0s ;
 }
 
 #modal.darkened-modal {
@@ -392,7 +437,6 @@ footer .logo {
 	filter:opacity(100%);
 	translate: 0 0;
 	transition: filter 0.2s ease-in, translate 0.2s;
-
 }
 
 #modal-content.closed{
@@ -408,8 +452,6 @@ footer .logo {
 	box-shadow: 0px 0px 22px rgba(0,0,0,0.7);
 }
 
-
-
 .modal-close-button {
 	position:absolute;
 	top:0;
@@ -420,7 +462,7 @@ footer .logo {
 	color: rgba(255, 255, 255, 0.575);
 	background-color: #0000;
 	font-size: 60px;
-	font-weight: bold;
+	font-weight: var(--bold);
 	cursor: pointer;
 	transition: all 0.2s ease-out;
 }
@@ -435,27 +477,16 @@ footer .logo {
 }
 
 #modal-text-header {
+	font-weight: var(--bold);
+	color: hsl(from var(--main-font-color) h s calc(l - 20%));
 	margin: 5% 0;
 }
 
 #modal-description {
-	font-size: x-large;
+	font-weight: var(--light);
+	font-size: 2.8rem;
 }
 
 span.person {
 	text-align: right;
-}
-
-#test {
-	font-size: 100px;
-	background-color: blueviolet;
-	transition: all 1s;
-}
-
-#test.hovered {
-	background-color: red;
-}
-
-#test.unhovered {
-	font-size: 30px;
 }

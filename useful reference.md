@@ -9,3 +9,5 @@ https://stackoverflow.com/questions/6370690/media-queries-how-to-target-desktop-
 @media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }```
+
+WOAHHH rgb "from color" where  has THIS been all my life?!
