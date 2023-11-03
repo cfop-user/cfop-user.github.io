@@ -37,6 +37,31 @@
 	--light: 300;
 }
 
+[data-theme="maths"] {
+	--main-font: mainFont;
+	--main-bg-color: #0c2428;
+	--main-font-color: white;
+	--secondary-bg-color: #044b41;
+	--secondary-font: "Poppins";
+	--secondary-font-color: rgb(214, 211, 214);
+	--nav-color: #65658062;
+	--emphasis: #ff8a8a;
+	--mild-emphasis: #ffacac;
+	--accent-color: #297c6a;
+	--footer-bg-color: var(--accent-color);
+	--secondary-heading-color: var(--accent-color);
+	--button-bg-color: var(--accent-color);
+	--footer-color: rgb(20, 6, 22);
+	--button-color: rgb(20,6,22);
+	--link-hover: #7c0034;
+	--maths-card-bg-color: #99d6e046;
+	--bold: 600;
+	--medium: 400;
+	--light: 300;
+}
+
+
+
 body {
 	padding: 0;
 	margin: 0;
@@ -104,6 +129,10 @@ section {
 
 #home-hero {
 	background-image: radial-gradient(circle,rgba(109, 69, 96, 0.7), rgba(30, 34, 70, 0.7)), url("assets/main\ hero\ image.jpg");
+}
+
+#math-hero {
+	background-image: radial-gradient(circle,rgba(69, 104, 109, 0.7), rgba(0, 5, 10, 0.7)), url("https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGFic3RyYWN0fGVufDB8MHwwfHx8MA%3D%3D");
 }
 
 #art-hero {
@@ -204,6 +233,10 @@ span.mild-emphasis {
 	flex-direction: column;
 }
 
+.primary-section {
+	width: 60%;
+}
+
 #decorated-section .secondary-section {
 	padding: 7% 0 7% 
 }
@@ -233,7 +266,7 @@ span.mild-emphasis {
 	color: var(--secondary-font-color)
 }
 
-.custom-shape-divider-bottom-1697752070 {
+.footer-divider {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -243,18 +276,18 @@ span.mild-emphasis {
     transform: rotate(180deg);
 }
 
-.custom-shape-divider-bottom-1697752070 svg {
+.footer-divider svg {
     position: relative;
     display: block;
-    width: 190%;
-    height: 74px;
+    width: 390%;
+    height: 10vh;
 }
 
-.custom-shape-divider-bottom-1697752070 .shape-fill {
+.footer-divider .shape-fill {
     fill: var(--footer-bg-color);
 }
 
-.custom-shape-divider-top-1697751732 {
+.gallery-divider {
     position: absolute;
     top: 0;
     left: 0;
@@ -263,15 +296,15 @@ span.mild-emphasis {
     line-height: 0;
 }
 
-.custom-shape-divider-top-1697751732 svg {
+.gallery-divider svg {
     position: relative;
     display: block;
     width: calc(300% + 1.3px);
-    height: 94px;
+    height: 10vh;
     transform: rotateY(180deg);
 }
 
-.custom-shape-divider-top-1697751732 .shape-fill {
+.gallery-divider .shape-fill {
     fill: var(--main-bg-color);
 }
 footer {
@@ -386,7 +419,7 @@ footer .logo {
 /* GALLERY */
 
 .gallery {
-	width: 50vw;
+	width: 60vw;
 	margin:auto;
 	padding: 3rem;
 }
@@ -394,7 +427,6 @@ footer .logo {
 .gallery-grid {
 	display: grid;
 	width: 100%;
-	/* background-color: #fff5; */
 	grid-template-columns: auto auto auto auto;
 	gap: 2rem 2rem;
 }
@@ -405,7 +437,7 @@ footer .logo {
 	object-fit: cover;
 	object-position: center;
 	transition: all 0.3s ease-out;
-	filter: sepia(10%) saturate(80%);
+	filter: sepia(10%) saturate(90%);
 }
 
 .gallery img:hover{
@@ -512,9 +544,43 @@ footer .logo {
 
 #modal-description {
 	font-weight: var(--light);
-	font-size: 2.8rem;
+	font-size: 2.4rem;
+}
+
+#modal-description .smaller{
+	font-size: 1.5rem;
 }
 
 span.person {
 	text-align: right;
+}
+
+
+.blog-list {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	gap: 2rem 2rem;
+}
+
+.blog-list>div {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--maths-card-bg-color);
+	align-items: center;
+	padding: 1rem;
+	border-radius: 15%;
+	overflow: hidden;
+}
+
+.blog-list>div>img {
+	width: 100%;
+	height: 70%;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 15% 15% 5% 5%;
+}
+
+.blog-list>div>h1 {
+	flex-shrink: 1;
+	/* might change this from h1s to a text div with heading and p */
 }
