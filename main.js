@@ -5,14 +5,15 @@ modalDescription = document.getElementById("modal-description");
 const modalContent = document.querySelector('#modal-content'); 
 
 function ImageClicked(image){
-	OpenModal()
+	OpenModal();
 	modalImage.src = image.src;
 	modalHeader.innerHTML = image.getAttribute("data-name");
 	if (!image.hasAttribute("data-description")){
 		modalDescription.innerHTML = "Made by Ben."
 	} else {
-	modalDescription.innerHTML = image.getAttribute("data-description")
+		modalDescription.innerHTML = image.getAttribute("data-description");
 	}
+	modalContent.style.width = "max(60%, " + (modalImage.clientWidth*2) + "px)";
 }
 
 function CloseModal() {
@@ -24,8 +25,7 @@ function CloseModal() {
 function OpenModal(){
 	modal.classList.remove("closed");
 	modal.classList.add("darkened-modal");
-	modalContent.classList.remove("closed")
-}
+	modalContent.classList.remove("closed")}
 
 document.addEventListener(
 	"click",
