@@ -1,1 +1,1 @@
-i need to move those fancy swirls to the footer not the object that happens to be before the footer, if thet makes sense
+at the moment, it absolutely breaks with 4 items, and with 2 it's obviously too big.
