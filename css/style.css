@@ -80,7 +80,7 @@ nav {
 	background-color: var(--secondary-bg);
 	color: var(--secondary-color);
 	position: sticky;
-	padding: 3em 4em 3em 1.4em;
+	padding: 3em 4.9em 3em 1.4em;
 }
 
 nav * {
@@ -193,7 +193,6 @@ span.middle-word {
 	padding: 0.1em 0.15em;
 	text-align: center;
 	/* transform: skew(-10deg); */
-	backdrop-filter: blur(1px);
 	position: relative;
 }
 span.last-word {
