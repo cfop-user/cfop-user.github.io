@@ -74,13 +74,15 @@ nav {
 	text-transform: uppercase;
 	box-sizing: border-box;
 	width: max(max-content, var(--nav-width));
+	width: max-content; /* This ensures that nav expands to fit its content */
+    min-width: max-content; 
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--secondary-bg);
 	color: var(--secondary-color);
 	position: sticky;
-	padding: 3em 4.9em 3em 1.4em;
+	padding: 3em 1.4em 3em 1.4em;
 }
 
 nav * {
@@ -131,7 +133,7 @@ nav a#home-link {
 	letter-spacing: 0.2em;
 	font-size: 1.3em;
 	font-weight: 800;
-	opacity:unset
+	opacity:unset;
 }
 
 nav a.active {
@@ -160,47 +162,48 @@ nav a.active {
 	display: block;
 	transition: opacity 500ms ease-out 100ms, transform 300ms ease
 }
+
+
 /* LOGO */
 .logo {
 	font-family: var(--header-font);
 	letter-spacing: normal;
-	line-height: normal;
+	line-height: 0.2;
 	font-size: 2.5em;
 	font-style: italic;
 	font-weight: 100;
 	text-transform: capitalize;
+
+
+
+	width:max-content;
+	display:flex;
+	flex-direction: column;
+
+	margin-bottom: 2em
+}
+.logo > *,.logo {
+	line-height: 0.8;
 }
 
-/* title */
-span.the {
+.the {
 	font-size: 0.6em;
-	letter-spacing: 0;
-	line-height: normal;
 	opacity: 0.7;
 	text-transform: lowercase;
-	transform: translateY(1.1em) translateX(0em);
 }
-span.middle-word {
-	/* background: linear-gradient(
-		to top,
-		color-mix(in srgb, var(--primary-accent), transparent 60%),
-		color-mix(in srgb, var(--primary-accent), transparent 30%),
-		color-mix(in srgb, var(--primary-accent), transparent 20%)
-	); */
-	color: var(--primary-color);
-	color: color-mix(in oklab, black, var(--primary-color));
+.middle-word {
 	color: var(--primary-accent);
-	padding: 0.1em 0.15em;
-	text-align: center;
-	/* transform: skew(-10deg); */
-	position: relative;
+	backdrop-filter: blur(1px);
+
+	padding: 0 1.5em 0 0.3em;
+	box-sizing: border-box;
+
+	letter-spacing: 0.08em;
+	line-height: 1.2;
 }
-span.last-word {
+.last-word {
 	text-align: right;
-	letter-spacing: 0.05em;
-	line-height: unset;
-	font-size: 0.85em;
+	font-size: 0.75em;
 	font-style: italic;
-	transform: translateY(-0.6em) translateX(1.5em);
-	position: relative;
 }
+
