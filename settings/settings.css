@@ -1,0 +1,32 @@
+@import "/css/style.css";
+
+.theme-options {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: auto;
+	gap: 2em;
+	background-color: var(--tertiary-bg);
+	/* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
+
+.theme-item {
+	box-sizing: border-box;
+	aspect-ratio: 1 / 1;
+	padding: 2.5em;
+	position: relative;
+	background: linear-gradient(
+		135deg,
+		var(--primary-bg) 0%,
+		var(--primary-bg) 50%,
+		var(--secondary-bg) 50%,
+		var(--secondary-bg) 100%
+	);
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	text-align: center;
+	font-size: 1.5em;
+	color: var(--primary-color);
+	border-radius: 8em;
+	box-shadow: rgba(105, 105, 105, 0.438) 0 0 1em;
+}
