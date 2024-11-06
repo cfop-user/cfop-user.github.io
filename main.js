@@ -1,3 +1,5 @@
+import { themes } from "/settings/themeChange.js";
+
 const dropdown = document.getElementById("blog-button");
 let items = document.getElementById("blog-items")
 console.log(dropdown)
@@ -122,3 +124,19 @@ function setupTest(){
 		}	
 	)
 }
+
+console.log(themes);
+
+
+// theme:
+var currentTheme = localStorage.getItem('theme') || themes[0];
+console.log(currentTheme);
+
+function applyTheme(theme) {
+	document.body.classList.remove(...themes);  // Remove all theme classes
+	document.body.classList.add(theme);  // Add the selected theme
+	localStorage.setItem('theme', theme);  // Store the selected theme in localStorage
+}
+console.log(currentTheme)
+applyTheme(currentTheme);
+console.log(currentTheme)

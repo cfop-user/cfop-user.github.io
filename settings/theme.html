@@ -3,7 +3,7 @@
 	<head>
 		<title>Settings</title>
 		<link id = "default" href="/css/style.css" rel="stylesheet" type="text/css" />
-		<link id = "default" href="/settings/settings.css" rel="stylesheet" type="text/css" />
+		<link id = "default" href="/css/settings.css" rel="stylesheet" type="text/css" />
 		<link rel="icon" type="image/x-icon" href=""/>
 		<link href="https://fonts.googleapis.com/css2?
 			family=Bebas+Neue
@@ -18,7 +18,7 @@
 		<script src="https://kit.fontawesome.com/a4347c6d31.js" crossorigin="anonymous"></script>
 	</head>
 
-	<body data-theme = "main">
+	<body class="theme-light">
 		<nav>
 			<!-- <h1 class="logo">Ben's<br>Site</h1> -->
 			<h1 class="logo"> <span class = "the">the</span> <br>
@@ -26,7 +26,7 @@
 				<span class="last-word">Collection</span></h1>
 			<div class = "main-links">
 				<a id="home-link" href = "/">home</a>
-				<a href = "art/art.html">art</a>
+				<a href = "/art/art.html">art</a>
 				<p id="blog-button">blog</p>
 				<li id="blog-items">
 					<a href = "/blog/maths/main.html">maths & programming</a>
@@ -45,15 +45,14 @@
 		<main>
 			<h1 id="fancy">Choose a Theme</h1>
 			<div class="theme-options">
-				<div class="theme-item" data-theme="main">Default</div>
-				<div class="theme-item" data-theme="rustic">Rustic</div>
-				<div class="theme-item" data-theme="berry">Berry Blast</div>
-				<div class="theme-item" data-theme="main">Default</div>
-				<div class="theme-item" data-theme="rustic">Rustic</div>
-				<div class="theme-item" data-theme="berry">Berry Blast</div>
+				<div class="theme-item theme-light">Light</div>
+				<div class="theme-item theme-dark">Dark</div>
+				<div class="theme-item theme-cherry-blossom">Blossom</div>
+				<div class="theme-item theme-raspberry">Berry</div>
 			</div>								
 		</main>
 		<script src="/main.js"></script>
 		<script src="/home.js"></script>
+		<script src="themeChange.js"></script>
   </body>
 </html>

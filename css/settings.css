@@ -1,0 +1,87 @@
+@import "../css/style.css";
+.theme-light {
+  --primary-color: #212729;
+  --primary-bg: #e4e6e7;
+  --primary-accent: #b5dce7;
+  --secondary-color: var(--primary-bg);
+  --secondary-bg: var(--primary-color);
+  --secondary-accent: #3fa7a7;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
+
+.theme-dark {
+  --primary-color: #e4e6e7;
+  --primary-bg: #212729;
+  --primary-accent: #317486;
+  --secondary-color: var(--primary-bg);
+  --secondary-bg: #b4b9bb;
+  --secondary-accent: #408b8b;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
+
+.theme-raspberry {
+  --primary-color: #dbd2d4;
+  --primary-bg: #19030b;
+  --primary-accent: #81214e;
+  --secondary-color: #white;
+  --secondary-bg: #4d1126;
+  --secondary-accent: #ea799f;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
+
+.theme-cherry-blossom {
+  --primary-color: #212729;
+  --primary-bg: #fff;
+  --primary-accent: hotpink;
+  --secondary-color: #511b36;
+  --secondary-bg: #f8d9e9;
+  --secondary-accent: hotpink;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #d1c6d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 2em;
+  background-color: color-mix(in srgb, var(--tertiary-bg), transparent 70%);
+  padding: 2em;
+  border-radius: 7em;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
+
+.theme-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  aspect-ratio: 1/1;
+  padding: 2.5em;
+  position: relative;
+  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--primary-bg) 50%, var(--secondary-bg) 50%, var(--secondary-bg) 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 1.5em;
+  color: var(--primary-color);
+  border-radius: 8em;
+  -webkit-box-shadow: rgba(105, 105, 105, 0.38) 0 0 1em;
+          box-shadow: rgba(105, 105, 105, 0.38) 0 0 1em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}/*# sourceMappingURL=settings.css.map */

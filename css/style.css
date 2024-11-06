@@ -1,209 +1,248 @@
-/*	
+.theme-light {
+  --primary-color: #212729;
+  --primary-bg: #e4e6e7;
+  --primary-accent: #b5dce7;
+  --secondary-color: var(--primary-bg);
+  --secondary-bg: var(--primary-color);
+  --secondary-accent: #3fa7a7;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
 
+.theme-dark {
+  --primary-color: #e4e6e7;
+  --primary-bg: #212729;
+  --primary-accent: #317486;
+  --secondary-color: var(--primary-bg);
+  --secondary-bg: #b4b9bb;
+  --secondary-accent: #408b8b;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
 
-	CHANGES MADE HERE WILL REFLECT ON 
-                   ALL
-	PAGES. if you want to edit a specific page,
-	use the relevant css files.
+.theme-raspberry {
+  --primary-color: #dbd2d4;
+  --primary-bg: #19030b;
+  --primary-accent: #81214e;
+  --secondary-color: #white;
+  --secondary-bg: #4d1126;
+  --secondary-accent: #ea799f;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
 
+.theme-cherry-blossom {
+  --primary-color: #212729;
+  --primary-bg: #fff;
+  --primary-accent: hotpink;
+  --secondary-color: #511b36;
+  --secondary-bg: #f8d9e9;
+  --secondary-accent: hotpink;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #d1c6d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
 
-*/
 *:root {
-	--nav-width: 20vw;
-	--primary-font: 'Cardo';
-	--accent-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
-	--header-font: "Playfair Display", "Julius sans one";
-	--main-font-size: 18px;
-	font-size: var(--main-font-size); 
-	/* to set rem */
-}
-
-[data-theme="main"] {
-	/* primary */
-	--primary-color: #212729;
-	--primary-bg: #e4e6e7;
-	--primary-accent: #b5dce7;
-
-	/* secondary */
-	--secondary-color: var(--primary-bg);
-	--secondary-bg: var(--primary-color);
-	--secondary-accent: #3fa7a7;
-
-	/* tertiary */
-	--tertiary-color: var(--secondary-color);
-	--tertiary-bg: #c6d1d1;
-	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
-}
-
-
-[data-theme="rustic"] {
-	--primary-color: #462724;
-	--primary-bg: #ddd2d5;
-	--primary-accent:#db7522;
-
-	--secondary-color: white;
-	--secondary-bg: var(--primary-color);
-	--secondary-accent: #faa647;
+  --nav-width: 20vw;
+  --primary-font: "Cardo";
+  --accent-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
+  --header-font: "Playfair Display", "Julius sans one";
+  --main-font-size: 18px;
+  font-size: var(--main-font-size);
+  /* to set rem */
 }
 
 body {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	background-color: var(--primary-bg);
-	font-family: var(--primary-font);
-	color: var(--primary-color);
-	font-size: 1rem;
-	overflow: scroll;
-	display: flex;
-	display: grid;
-	grid-template-columns: auto 1fr; 
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary-bg);
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 1rem;
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
 }
 
 main {
-	padding: 3rem;
-	overflow-y: auto;
-	height: 100vh;
-	grid-column: 2;
-	box-sizing: border-box;
-	width: 100%
+  padding: 3rem;
+  overflow-y: auto;
+  height: 100vh;
+  grid-column: 2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
 }
 
 nav {
-	font-family: var(--accent-font);
-	text-transform: uppercase;
-	box-sizing: border-box;
-	width: max(max-content, var(--nav-width));
-	width: max-content; /* This ensures that nav expands to fit its content */
-    min-width: max-content; 
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	background-color: var(--secondary-bg);
-	color: var(--secondary-color);
-	position: sticky;
-	padding: 3em 1.4em 3em 1.4em;
+  font-family: var(--accent-font);
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: max(-webkit-max-content, var(--nav-width));
+  width: max(-moz-max-content, var(--nav-width));
+  width: max(max-content, var(--nav-width));
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content; /* This ensures that nav expands to fit its content */
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+  position: sticky;
+  padding: 3em 1.4em 3em 1.4em;
 }
 
 nav * {
-	display: block;
-	line-height: 2;
-	letter-spacing: 0.1em;
+  display: block;
+  line-height: 2;
+  letter-spacing: 0.1em;
 }
 
 nav a, #blog-button {
-	text-decoration: none;
-	color: inherit;
-	width: max-content;
-	text-wrap:pretty
+  text-decoration: none;
+  color: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  text-wrap: pretty;
 }
 
 /* underline effect */
 nav a {
-	background:
-		linear-gradient(
-			to right,
-			transparent,
-			transparent
-		),
-		linear-gradient(
-			to right,
-			color-mix(in srgb, var(--secondary-accent), var(--primary-bg)),
-			var(--secondary-accent)
-	);
-	background-size: 100% 3px, 0 3px;
-	background-position: 100% 100%, 0 100%;
-	background-repeat: no-repeat;
-	opacity: 0.75;
-	transition-property: opacity, background-position;
-	transition: 200ms ease-in-out;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent)), -webkit-gradient(linear, left top, right top, from(color-mix(in srgb, var(--secondary-accent), var(--primary-bg))), to(var(--secondary-accent)));
+  background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, color-mix(in srgb, var(--secondary-accent), var(--primary-bg)), var(--secondary-accent));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  -webkit-transition-property: opacity, background-position;
+  transition-property: opacity, background-position;
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
 }
 
 nav a:not(a#blog-button):hover {
-	background-size: 0 3px, 100% 3px;
-	opacity: 1;
+  background-size: 0 3px, 100% 3px;
+  opacity: 1;
 }
 
 /* more nav stuff */
 nav li a {
-	margin-left: 1em
+  margin-left: 1em;
 }
 
 nav a#home-link {
-	letter-spacing: 0.2em;
-	font-size: 1.3em;
-	font-weight: 800;
-	opacity:unset;
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  font-weight: 800;
+  opacity: unset;
 }
 
 nav a.active {
-	color: var(--secondary-accent);
-	opacity: 1;
+  color: var(--secondary-accent);
+  opacity: 1;
 }
-
 
 #blog-button {
-	opacity: 0.7;
-	margin: 0
+  opacity: 0.7;
+  margin: 0;
 }
+
 #blog-button:hover, #blog-button.open {
-	opacity: 0.9
+  opacity: 0.9;
 }
 
 #blog-items {
-	opacity: 0;
-	transform: translateY(-200px);
-	display: none;
-	transition: opacity 100ms ease-in, transform 500ms ease
-}
-#blog-items.open {
-	opacity: 0.7;
-	transform: translateY(0px);
-	display: block;
-	transition: opacity 500ms ease-out 100ms, transform 300ms ease
+  opacity: 0;
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
+  display: none;
+  -webkit-transition: opacity 100ms ease-in, -webkit-transform 500ms ease;
+  transition: opacity 100ms ease-in, -webkit-transform 500ms ease;
+  transition: opacity 100ms ease-in, transform 500ms ease;
+  transition: opacity 100ms ease-in, transform 500ms ease, -webkit-transform 500ms ease;
 }
 
+#blog-items.open {
+  opacity: 0.7;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  display: block;
+  -webkit-transition: opacity 500ms ease-out 100ms, -webkit-transform 300ms ease;
+  transition: opacity 500ms ease-out 100ms, -webkit-transform 300ms ease;
+  transition: opacity 500ms ease-out 100ms, transform 300ms ease;
+  transition: opacity 500ms ease-out 100ms, transform 300ms ease, -webkit-transform 300ms ease;
+}
 
 /* LOGO */
 .logo {
-	font-family: var(--header-font);
-	letter-spacing: normal;
-	line-height: 0.2;
-	font-size: 2.5em;
-	font-style: italic;
-	font-weight: 100;
-	text-transform: capitalize;
-
-
-
-	width:max-content;
-	display:flex;
-	flex-direction: column;
-
-	margin-bottom: 2em
+  font-family: var(--header-font);
+  letter-spacing: normal;
+  line-height: 0.2;
+  font-size: 2.5em;
+  font-style: italic;
+  font-weight: 100;
+  text-transform: capitalize;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2em;
 }
-.logo > *,.logo {
-	line-height: 0.8;
+
+.logo > *, .logo {
+  line-height: 0.8;
 }
 
 .the {
-	font-size: 0.6em;
-	opacity: 0.7;
-	text-transform: lowercase;
+  font-size: 0.6em;
+  opacity: 0.7;
+  text-transform: lowercase;
 }
+
 .middle-word {
-	color: var(--primary-accent);
-	backdrop-filter: blur(1px);
-
-	padding: 0 1.5em 0 0.3em;
-	box-sizing: border-box;
-
-	letter-spacing: 0.08em;
-	line-height: 1.2;
+  color: var(--primary-accent);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 0 1.5em 0 0.3em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
 }
+
 .last-word {
-	text-align: right;
-	font-size: 0.75em;
-	font-style: italic;
-}
-
+  text-align: right;
+  font-size: 0.75em;
+  font-style: italic;
+}/*# sourceMappingURL=style.css.map */
