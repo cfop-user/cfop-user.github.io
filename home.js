@@ -12,10 +12,10 @@ heading.addEventListener(
 	}
 )
 
-var grid = document.querySelector('.gallery');
-var msnry = new Masonry(grid, {
-  // options
-  itemSelector: '.gallery__thumb',
-  columnWidth: '.gallery__thumb'
-});
+// var grid = document.querySelector('.gallery');
+// var msnry = new Masonry(grid, {
+//   // options
+//   itemSelector: '.gallery__thumb',
+//   columnWidth: '.gallery__thumb'
+// });
 

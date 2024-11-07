@@ -1,4 +1,4 @@
-import { themes } from "/settings/themeChange.js";
+// import { themes } from "./settings/themeChange.js";
 
 const dropdown = document.getElementById("blog-button");
 let items = document.getElementById("blog-items")
@@ -19,9 +19,9 @@ dropdown.addEventListener(
 
 
 const modal = document.getElementById("modal");
-modalImage = document.getElementById("modal-image");
-modalHeader = document.getElementById("modal-text-header");
-modalDescription = document.getElementById("modal-description");
+let modalImage = document.getElementById("modal-image");
+let modalHeader = document.getElementById("modal-text-header");
+let modalDescription = document.getElementById("modal-description");
 const modalContent = document.querySelector('#modal-content'); 
 
 function ImageClicked(image){
@@ -125,18 +125,34 @@ function setupTest(){
 	)
 }
 
-console.log(themes);
-
-
 // theme:
+const themes = [
+	'theme-light',
+	'theme-dark',
+	'theme-raspberry',
+	'theme-cherry-blossom'
+];
 var currentTheme = localStorage.getItem('theme') || themes[0];
-console.log(currentTheme);
 
 function applyTheme(theme) {
 	document.body.classList.remove(...themes);  // Remove all theme classes
 	document.body.classList.add(theme);  // Add the selected theme
 	localStorage.setItem('theme', theme);  // Store the selected theme in localStorage
 }
-console.log(currentTheme)
+
+
 applyTheme(currentTheme);
-console.log(currentTheme)
+
+const themeItems = document.querySelectorAll('.theme-item');
+themeItems.forEach(item => {
+  item.addEventListener('click', () => {
+	console.log("clicked!");
+    const selectedTheme = item .classList[1];  // The second class is the theme class
+    applyTheme(selectedTheme);
+	console.log(document.body.classList)
+  });
+});
+
+
+
+console.log(themes);

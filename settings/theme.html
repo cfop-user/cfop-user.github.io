@@ -2,8 +2,11 @@
 <html>
 	<head>
 		<title>Settings</title>
-		<link id = "default" href="/css/style.css" rel="stylesheet" type="text/css" />
-		<link id = "default" href="/css/settings.css" rel="stylesheet" type="text/css" />
+		<link id = "default=styles" href="/css/style.css" rel="preload" as="style" type="text/css" />
+		<link id = "settings-styles" href="/css/settings.css" rel="preload" as="style" type="text/css" />
+		<link rel="stylesheet" href="/css/style.css" />
+		<link rel="stylesheet" href="/css/settings.css" />
+		
 		<link rel="icon" type="image/x-icon" href=""/>
 		<link href="https://fonts.googleapis.com/css2?
 			family=Bebas+Neue
@@ -51,8 +54,7 @@
 				<div class="theme-item theme-raspberry">Berry</div>
 			</div>								
 		</main>
-		<script src="/main.js"></script>
-		<script src="/home.js"></script>
-		<script src="themeChange.js"></script>
+		<script type="module" src="/main.js"></script>
+		<!-- <script src="/home.js" defer></script> -->
   </body>
 </html>
