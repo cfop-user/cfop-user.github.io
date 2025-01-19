@@ -16,8 +16,6 @@ dropdown.addEventListener(
 	}
 )
 
-
-
 const modal = document.getElementById("modal");
 let modalImage = document.getElementById("modal-image");
 let modalHeader = document.getElementById("modal-text-header");

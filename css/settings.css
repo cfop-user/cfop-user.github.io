@@ -26,12 +26,12 @@
 .theme-raspberry {
   --primary-color: #dbd2d4;
   --primary-bg: #19030b;
-  --primary-accent: #81214e;
+  --primary-accent: #d32274;
   --secondary-color: #white;
   --secondary-bg: #4d1126;
   --secondary-accent: #ea799f;
   --tertiary-color: var(--secondary-color);
-  --tertiary-bg: #c6d1d1;
+  --tertiary-bg: #c16382b0;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
 

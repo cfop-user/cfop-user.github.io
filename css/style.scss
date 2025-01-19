@@ -1,11 +1,17 @@
-@import 'theme';
+@use 'theme';
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+@import url('https://fonts.googleapis.com/css2?family=Cardo');
+
 
 
 *:root {
 	--nav-width: 20vw;
 	--primary-font: 'Cardo';
-	--accent-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
-	--header-font: "Playfair Display", "Julius sans one";
+	--sans-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
+	--header-font:  "Playfair Display", "Julius sans one";
+	--logo-font: 'Playfair display';
 	--main-font-size: 18px;
 	font-size: var(--main-font-size); 
 	/* to set rem */
@@ -45,7 +51,7 @@ main {
 }
 
 nav {
-	font-family: var(--accent-font);
+	font-family: var(--sans-font);
 	text-transform: uppercase;
 	box-sizing: border-box;
 	width: max(max-content, var(--nav-width));
@@ -58,65 +64,64 @@ nav {
 	color: var(--secondary-color);
 	position: sticky;
 	padding: 3em 1.4em 3em 1.4em;
+
+	* {
+		display: block;
+		line-height: 2;
+		letter-spacing: 0.1em;
+	}
+
+	a, #blog-button {
+		text-decoration: none;
+		color: inherit;
+		width: max-content;
+		text-wrap:pretty
+	}
+
+	/* underline effect */
+	a {
+		background:
+			linear-gradient(
+				to right,
+				transparent,
+				transparent
+			),
+			linear-gradient(
+				to right,
+				color-mix(in srgb, var(--secondary-accent), var(--primary-bg)),
+				var(--secondary-accent)
+		);
+		background-size: 100% 3px, 0 3px;
+		background-position: 100% 100%, 0 100%;
+		background-repeat: no-repeat;
+		opacity: 0.75;
+		transition-property: opacity, background-position;
+		transition: 200ms ease-in-out;
+	}
+
+	a:not(a#blog-button):hover {
+		background-size: 0 3px, 100% 3px;
+		opacity: 1;
+	}
+
+	/* more nav stuff */
+	li a {
+		margin-left: 1em
+	}
+
+	a#home-link {
+		letter-spacing: 0.2em;
+		font-size: 1.3em;
+		font-weight: 800;
+		opacity:unset;
+	}
+
+	a.active {
+		color: var(--secondary-accent);
+		opacity: 1;
+	}
+
 }
-
-nav * {
-	display: block;
-	line-height: 2;
-	letter-spacing: 0.1em;
-}
-
-nav a, #blog-button {
-	text-decoration: none;
-	color: inherit;
-	width: max-content;
-	text-wrap:pretty
-}
-
-/* underline effect */
-nav a {
-	background:
-		linear-gradient(
-			to right,
-			transparent,
-			transparent
-		),
-		linear-gradient(
-			to right,
-			color-mix(in srgb, var(--secondary-accent), var(--primary-bg)),
-			var(--secondary-accent)
-	);
-	background-size: 100% 3px, 0 3px;
-	background-position: 100% 100%, 0 100%;
-	background-repeat: no-repeat;
-	opacity: 0.75;
-	transition-property: opacity, background-position;
-	transition: 200ms ease-in-out;
-}
-
-nav a:not(a#blog-button):hover {
-	background-size: 0 3px, 100% 3px;
-	opacity: 1;
-}
-
-/* more nav stuff */
-nav li a {
-	margin-left: 1em
-}
-
-nav a#home-link {
-	letter-spacing: 0.2em;
-	font-size: 1.3em;
-	font-weight: 800;
-	opacity:unset;
-}
-
-nav a.active {
-	color: var(--secondary-accent);
-	opacity: 1;
-}
-
-
 #blog-button {
 	opacity: 0.7;
 	margin: 0
@@ -141,7 +146,7 @@ nav a.active {
 
 /* LOGO */
 .logo {
-	font-family: var(--header-font);
+	font-family: var(--logo-font);
 	letter-spacing: normal;
 	line-height: 0.2;
 	font-size: 2.5em;
@@ -155,30 +160,31 @@ nav a.active {
 	display:flex;
 	flex-direction: column;
 
-	margin-bottom: 2em
-}
-.logo > *,.logo {
-	line-height: 0.8;
-}
+	margin-bottom: 2em;
 
-.the {
-	font-size: 0.6em;
-	opacity: 0.7;
-	text-transform: lowercase;
-}
-.middle-word {
-	color: var(--primary-accent);
-	backdrop-filter: blur(1px);
+	&, * {
+		line-height: 0.8;
+	}
 
-	padding: 0 1.5em 0 0.3em;
-	box-sizing: border-box;
+	.the {
+		font-size: 0.6em;
+		opacity: 0.7;
+		text-transform: lowercase;
+	}
+	.middle-word {
+		color: var(--primary-accent);
+		backdrop-filter: blur(1px);
 
-	letter-spacing: 0.08em;
-	line-height: 1.2;
-}
-.last-word {
-	text-align: right;
-	font-size: 0.75em;
-	font-style: italic;
-}
+		padding: 0 1.5em 0 0.3em;
+		box-sizing: border-box;
 
+		letter-spacing: 0.08em;
+		line-height: 1.2;
+	}
+	.last-word {
+		text-align: right;
+		font-size: 0.75em;
+		font-style: italic;
+	}
+
+}

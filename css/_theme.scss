@@ -26,7 +26,7 @@
 
 	// secondary 
 	--secondary-color: var(--primary-bg);
-	--secondary-bg: #{scale-color($base-light, $lightness: -20%, $saturation: -20%)};
+	--secondary-bg: #{color.scale($base-light, $lightness: -20%, $saturation: -20%)};
 	--secondary-accent: #408b8b;
 
 	// tertiary 
@@ -36,10 +36,13 @@
 }
 
 .theme-raspberry {
+	$base-accent: #d32274;
+	
+
 	// primary
 	--primary-color: #dbd2d4;
 	--primary-bg: #19030b;
-	--primary-accent: #81214e;
+	--primary-accent: #{$base-accent};
 
 	// secondary 
 	--secondary-color: #white;
@@ -48,7 +51,7 @@
 
 	// tertiary 
 	--tertiary-color: var(--secondary-color);
-	--tertiary-bg: #c6d1d1;
+	--tertiary-bg: #c16382b0;
 	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
 }
 
@@ -61,8 +64,8 @@
 	--primary-accent: #{$base-accent};
 
 	// secondary 
-	--secondary-color: #{scale-color($base-accent, $lightness: -70%, $saturation: -50%)};
-	--secondary-bg: #{scale-color($base-accent, $lightness: 70%, $saturation: -30%)};
+	--secondary-color: #{color.scale($base-accent, $lightness: -70%, $saturation: -50%)};
+	--secondary-bg: #{color.scale($base-accent, $lightness: 70%, $saturation: -30%)};
 	--secondary-accent: #{$base-accent};
 
 	// tertiary 
