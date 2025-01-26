@@ -1,22 +1,19 @@
 @import "/css/style.css";
 
 main h1 {
-	font-family: var(--header-font);
-	font-style: italic;
+	font-family: var(--sans-font);
+	/* font-style: italic; */
 	font-size: 2.5em;
+	font-weight: 300;
 	/* text-decoration: underline 2px solid; */
-}
-
-main h1 {
-	opacity: 0.75;
-	transition-property: opacity;
+	text-decoration: color-mix(in srgb, var(--primary-accent), transparent) solid 2px underline;
+	text-underline-offset: .2em;
 }
 
 main {
 	width: 80%;
 	font-size: 1.3em;
 }
-
 
 
 /* gallery */

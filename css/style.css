@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Serif+4");
 @import url("https://fonts.googleapis.com/css2?family=Quicksand");
 @import url("https://fonts.googleapis.com/css2?family=Cardo");
+@import url("https://fonts.googleapis.com/css2?family=Spectral");
 .theme-light {
   --primary-color: #212729;
   --primary-bg: #e4e6e7;
@@ -17,10 +18,10 @@
   --primary-color: #e4e6e7;
   --primary-bg: #212729;
   --primary-accent: #317486;
-  --secondary-color: var(--primary-bg);
-  --secondary-bg: rgb(180.24, 184.72, 186.96);
+  --secondary-color: white;
+  --secondary-bg: #12181c;
   --secondary-accent: #408b8b;
-  --tertiary-color: var(--secondary-color);
+  --tertiary-color: #5c7a8a;
   --tertiary-bg: #c6d1d1;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
@@ -33,7 +34,7 @@
   --secondary-bg: #4d1126;
   --secondary-accent: #ea799f;
   --tertiary-color: var(--secondary-color);
-  --tertiary-bg: #c16382b0;
+  --tertiary-bg: #c1638283;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
 
@@ -42,18 +43,69 @@
   --primary-bg: #fff;
   --primary-accent: hotpink;
   --secondary-color: #511b36;
-  --secondary-bg: rgb(248.25, 216.75, 232.5);
+  --secondary-bg: #f8d9e9;
   --secondary-accent: hotpink;
   --tertiary-color: var(--secondary-color);
   --tertiary-bg: #d1c6d1;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
 }
 
+.theme-sepia {
+  --primary-color: #482005;
+  --primary-bg: #f0e8e0;
+  --primary-bg: #eee0cb;
+  --primary-accent: rgb(192, 130, 106);
+  --secondary-color: white;
+  --secondary-bg: #b38877;
+  --secondary-bg: color-mix(in srgb, #c2847a, var(--primary-bg));
+  --secondary-accent: #833112;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #bdb19f;
+  --tertiary-bg: #baa898;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-jest {
+  --primary-color: #750b4c;
+  --primary-bg: #ffe8f3;
+  --primary-accent: rgb(238, 170, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #475d43;
+  --secondary-accent: rgb(197, 234, 197);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-emerald {
+  --primary-color: #7cbd97;
+  --primary-bg: #10351c;
+  --primary-accent: rgb(170, 238, 191);
+  --secondary-color: #fff;
+  --secondary-bg: #071f0e;
+  --secondary-accent: rgb(113, 207, 113);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-grape {
+  --primary-color: #303085;
+  --primary-bg: #b7b7d6;
+  --primary-accent: rgb(145, 97, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #6c4879;
+  --secondary-accent: #ab7eeb;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #6a48797b;
+  --tertiary-accent: #dcc8ff;
+}
+
 *:root {
   --nav-width: 20vw;
   --primary-font: "Cardo";
   --sans-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
-  --header-font: "Playfair Display", "Julius sans one";
+  --header-font: "Spectral", "Playfair Display", "Julius sans one";
   --logo-font: "Playfair display";
   --main-font-size: 18px;
   font-size: var(--main-font-size);
@@ -61,7 +113,8 @@
 }
 
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
   background-color: var(--primary-bg);
@@ -69,6 +122,8 @@ body {
   color: var(--primary-color);
   font-size: 1rem;
   overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -84,20 +139,33 @@ main {
   overflow-y: auto;
   height: 100vh;
   grid-column: 2;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 
 nav {
   font-family: var(--sans-font);
   text-transform: uppercase;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: max(-webkit-max-content, var(--nav-width));
+  width: max(-moz-max-content, var(--nav-width));
   width: max(max-content, var(--nav-width));
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content; /* This ensures that nav expands to fit its content */
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
   min-width: max-content;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--secondary-bg);
   color: var(--secondary-color);
   position: sticky;
@@ -113,17 +181,25 @@ nav * {
 nav a, nav #blog-button {
   text-decoration: none;
   color: inherit;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
   text-wrap: pretty;
 }
 nav a {
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(transparent)), -webkit-gradient(linear, left top, right top, from(color-mix(in srgb, var(--secondary-accent), var(--primary-bg))), to(var(--secondary-accent)));
   background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, color-mix(in srgb, var(--secondary-accent), var(--primary-bg)), var(--secondary-accent));
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
   background-repeat: no-repeat;
   opacity: 0.75;
+  -webkit-transition-property: opacity, background-position;
   transition-property: opacity, background-position;
+  -webkit-transition: 200ms ease-in-out;
   transition: 200ms ease-in-out;
+}
+nav a, nav #blog-button {
+  font-weight: 800;
 }
 nav a:not(a#blog-button):hover {
   background-size: 0 3px, 100% 3px;
@@ -147,23 +223,43 @@ nav a.active {
   opacity: 0.7;
   margin: 0;
 }
-
-#blog-button:hover, #blog-button.open {
+#blog-button::after {
+  content: ">";
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  display: inline-block;
+  margin-left: 0.4em;
+  color: var(--secondary-accent);
+}
+#blog-button:hover, #blog-button:has(+ .open) {
   opacity: 0.9;
+}
+#blog-button:has(+ .open)::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 #blog-items {
   opacity: 0;
-  transform: translateY(-200px);
+  -webkit-transform: translateY(-200px);
+          transform: translateY(-200px);
   display: none;
+  -webkit-transition: opacity 100ms ease-in, -webkit-transform 500ms ease;
+  transition: opacity 100ms ease-in, -webkit-transform 500ms ease;
   transition: opacity 100ms ease-in, transform 500ms ease;
+  transition: opacity 100ms ease-in, transform 500ms ease, -webkit-transform 500ms ease;
 }
-
 #blog-items.open {
   opacity: 0.7;
-  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
   display: block;
+  -webkit-transition: opacity 500ms ease-out 100ms, -webkit-transform 300ms ease;
+  transition: opacity 500ms ease-out 100ms, -webkit-transform 300ms ease;
   transition: opacity 500ms ease-out 100ms, transform 300ms ease;
+  transition: opacity 500ms ease-out 100ms, transform 300ms ease, -webkit-transform 300ms ease;
 }
 
 /* LOGO */
@@ -175,9 +271,16 @@ nav a.active {
   font-style: italic;
   font-weight: 100;
   text-transform: capitalize;
+  width: -webkit-max-content;
+  width: -moz-max-content;
   width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 2em;
 }
 .logo, .logo * {
@@ -189,10 +292,12 @@ nav a.active {
   text-transform: lowercase;
 }
 .logo .middle-word {
-  color: var(--primary-accent);
-  backdrop-filter: blur(1px);
+  color: var(--secondary-accent);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
   padding: 0 1.5em 0 0.3em;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   letter-spacing: 0.08em;
   line-height: 1.2;
 }
@@ -200,6 +305,4 @@ nav a.active {
   text-align: right;
   font-size: 0.75em;
   font-style: italic;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

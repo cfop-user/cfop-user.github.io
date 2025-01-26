@@ -15,10 +15,10 @@
   --primary-color: #e4e6e7;
   --primary-bg: #212729;
   --primary-accent: #317486;
-  --secondary-color: var(--primary-bg);
-  --secondary-bg: #b4b9bb;
+  --secondary-color: white;
+  --secondary-bg: #12181c;
   --secondary-accent: #408b8b;
-  --tertiary-color: var(--secondary-color);
+  --tertiary-color: #5c7a8a;
   --tertiary-bg: #c6d1d1;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
@@ -31,7 +31,7 @@
   --secondary-bg: #4d1126;
   --secondary-accent: #ea799f;
   --tertiary-color: var(--secondary-color);
-  --tertiary-bg: #c16382b0;
+  --tertiary-bg: #c1638283;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
 
@@ -47,41 +47,90 @@
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
 }
 
+.theme-sepia {
+  --primary-color: #482005;
+  --primary-bg: #f0e8e0;
+  --primary-bg: #eee0cb;
+  --primary-accent: rgb(192, 130, 106);
+  --secondary-color: white;
+  --secondary-bg: #b38877;
+  --secondary-bg: color-mix(in srgb, #c2847a, var(--primary-bg));
+  --secondary-accent: #833112;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #bdb19f;
+  --tertiary-bg: #baa898;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-jest {
+  --primary-color: #750b4c;
+  --primary-bg: #ffe8f3;
+  --primary-accent: rgb(238, 170, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #475d43;
+  --secondary-accent: rgb(197, 234, 197);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-emerald {
+  --primary-color: #7cbd97;
+  --primary-bg: #10351c;
+  --primary-accent: rgb(170, 238, 191);
+  --secondary-color: #fff;
+  --secondary-bg: #071f0e;
+  --secondary-accent: rgb(113, 207, 113);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-grape {
+  --primary-color: #303085;
+  --primary-bg: #b7b7d6;
+  --primary-accent: rgb(145, 97, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #6c4879;
+  --secondary-accent: #ab7eeb;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #6a48797b;
+  --tertiary-accent: #dcc8ff;
+}
+
 .theme-options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
   gap: 2em;
   background-color: color-mix(in srgb, var(--tertiary-bg), transparent 70%);
   padding: 2em;
-  border-radius: 7em;
+  border-radius: 0rem;
   /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
 }
-
-.theme-item {
+.theme-options .theme-item {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  aspect-ratio: 1/1;
-  padding: 2.5em;
   position: relative;
-  background: linear-gradient(135deg, var(--primary-bg) 0%, var(--primary-bg) 50%, var(--secondary-bg) 50%, var(--secondary-bg) 100%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  font-size: 1.5em;
   color: var(--primary-color);
-  border-radius: 8em;
-  -webkit-box-shadow: rgba(105, 105, 105, 0.38) 0 0 1em;
-          box-shadow: rgba(105, 105, 105, 0.38) 0 0 1em;
+  font-size: 1.5em;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-color: var(--primary-bg);
+  position: relative;
+  padding: 2rem;
+  padding-right: 3rem;
+  -webkit-text-decoration: var(--primary-accent) 2px underline;
+          text-decoration: var(--primary-accent) 2px underline;
+  text-underline-offset: 0.25em;
+  --middle: 70%;
+  --right: 95%;
+  background: linear-gradient(45deg, var(--primary-bg) var(--middle), var(--secondary-bg) var(--middle), var(--secondary-bg) var(--right), var(--tertiary-bg) var(--right));
+}
+.theme-options .theme-item.active {
+  border: 3px outset var(--primary-accent);
+  -webkit-box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
+          box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
 }/*# sourceMappingURL=settings.css.map */

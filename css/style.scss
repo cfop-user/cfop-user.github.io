@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand');
 @import url('https://fonts.googleapis.com/css2?family=Cardo');
+@import url('https://fonts.googleapis.com/css2?family=Spectral');
 
 
 
@@ -10,7 +11,7 @@
 	--nav-width: 20vw;
 	--primary-font: 'Cardo';
 	--sans-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
-	--header-font:  "Playfair Display", "Julius sans one";
+	--header-font:  "Spectral", "Playfair Display", "Julius sans one";
 	--logo-font: 'Playfair display';
 	--main-font-size: 18px;
 	font-size: var(--main-font-size); 
@@ -99,6 +100,10 @@ nav {
 		transition: 200ms ease-in-out;
 	}
 
+	a, #blog-button {
+		font-weight: 800;
+	}
+
 	a:not(a#blog-button):hover {
 		background-size: 0 3px, 100% 3px;
 		opacity: 1;
@@ -124,25 +129,42 @@ nav {
 }
 #blog-button {
 	opacity: 0.7;
-	margin: 0
-}
-#blog-button:hover, #blog-button.open {
-	opacity: 0.9
+	margin: 0;
+
+	&::after{
+		content: ">";
+		transition: transform 400ms;
+		display: inline-block;
+		margin-left: 0.4em;
+		color: var(--secondary-accent)
+	}
+	
+	&:hover, &:has(+.open) {
+		opacity: 0.9;
+	}
+
+	&:has(+ .open) {
+		&::after{
+			// content: "V"
+			transform: rotate(90deg);
+		}
+	}
 }
 
 #blog-items {
 	opacity: 0;
 	transform: translateY(-200px);
 	display: none;
-	transition: opacity 100ms ease-in, transform 500ms ease
-}
-#blog-items.open {
-	opacity: 0.7;
-	transform: translateY(0px);
-	display: block;
-	transition: opacity 500ms ease-out 100ms, transform 300ms ease
-}
+	transition: opacity 100ms ease-in, transform 500ms ease;
 
+	&.open {
+		opacity: 0.7;
+		transform: translateY(0px);
+		display: block;
+		transition: opacity 500ms ease-out 100ms, transform 300ms ease
+	}
+
+}
 
 /* LOGO */
 .logo {
@@ -172,7 +194,7 @@ nav {
 		text-transform: lowercase;
 	}
 	.middle-word {
-		color: var(--primary-accent);
+		color: var(--secondary-accent);
 		backdrop-filter: blur(1px);
 
 		padding: 0 1.5em 0 0.3em;
