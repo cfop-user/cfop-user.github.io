@@ -1,0 +1,153 @@
+@use 'sass:color';
+
+.theme-light {
+	// primary
+	--primary-color: #212729;
+	--primary-bg: #e4e6e7;
+	--primary-accent: #b5dce7;
+
+	// secondary 
+	--secondary-color: var(--primary-bg);
+	--secondary-bg: var(--primary-color);
+	--secondary-accent: #3fa7a7;
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #c6d1d1;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
+}
+
+.theme-dark {
+	$base-light:  #e4e6e7;
+	// primary
+	--primary-color: #{$base-light};
+	--primary-bg: #212729;;
+	--primary-accent: #317486;
+
+	// secondary 
+	--secondary-color: white;
+	--secondary-bg: #{color.scale($base-light, $lightness: -90%, $saturation: 15%)};
+	--secondary-accent: #408b8b;
+
+	// tertiary 
+	--tertiary-color: #{color.scale($base-light, $lightness: -50%, $saturation: 15%)};
+	--tertiary-bg: #c6d1d1;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
+}
+
+.theme-raspberry {
+	$base-accent: #d32274;
+	
+
+	// primary
+	--primary-color: #dbd2d4;
+	--primary-bg: #19030b;
+	--primary-accent: #{$base-accent};
+
+	// secondary 
+	--secondary-color: #white;
+	--secondary-bg: #4d1126;
+	--secondary-accent: #ea799f;
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #c1638283;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
+}
+
+.theme-cherry-blossom {
+	$base-accent:  hotpink;
+
+	// primary
+	--primary-color: #212729;
+	--primary-bg: #fff;
+	--primary-accent: #{$base-accent};
+
+	// secondary 
+	--secondary-color: #{color.scale($base-accent, $lightness: -70%, $saturation: -50%)};
+	--secondary-bg: #{color.scale($base-accent, $lightness: 70%, $saturation: -30%)};
+	--secondary-accent: #{$base-accent};
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #d1c6d1;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-sepia {
+	$base-accent:  rgb(192, 130, 106);
+
+	// primary
+	--primary-color: #482005;
+	--primary-bg: #f0e8e0;
+	--primary-bg: #eee0cb;
+	--primary-accent: #{$base-accent};
+
+	// secondary 
+	--secondary-color: #{color.scale($base-accent, $lightness: 100%, $saturation: -50%)};
+	--secondary-bg: #{color.scale($base-accent, $lightness: 0%, $saturation: -30%)};
+	--secondary-bg: color-mix(in srgb, #c2847a, var(--primary-bg));
+	--secondary-accent: #{color.scale($base-accent, $lightness: -50%, $saturation: 60%)};
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #bdb19f;
+	--tertiary-bg: #baa898;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-jest {
+	$base-accent:  rgb(197, 234, 197);
+
+	// primary
+	--primary-color: #750b4c;
+	--primary-bg: #ffe8f3;
+	--primary-accent: rgb(238, 170, 204);
+
+	// secondary 
+	--secondary-color: #fff;
+	--secondary-bg: #475d43;
+	--secondary-accent: #{$base-accent};
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #a2ad917d;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-emerald {
+	$base-accent:  rgb(113, 207, 113);
+
+	// primary
+	--primary-color: #7cbd97;
+	--primary-bg: #10351c;
+	--primary-accent: rgb(170, 238, 191);
+
+	// secondary 
+	--secondary-color: #fff;
+	--secondary-bg: #071f0e;
+	--secondary-accent: #{$base-accent};
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #a2ad917d;
+	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-grape {
+
+	// primary
+	--primary-color: #303085;
+	--primary-bg: #b7b7d6;
+	--primary-accent: rgb(145, 97, 204);
+
+	// secondary 
+	--secondary-color: #fff;
+	--secondary-bg: #6c4879;
+	--secondary-accent: #ab7eeb;
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #6a48797b;
+	--tertiary-accent: #dcc8ff;
+}

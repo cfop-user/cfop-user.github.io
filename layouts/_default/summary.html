@@ -1,9 +1,9 @@
-<a href="{{ .Permalink }}">
-	<div>{{ .Title }}</div>
-	<div>{{ .Summary }}</div>
-	<div>
-	  <span>{{ .ReadingTime }} Minutes</span>
-	  <span>{{ .Date.Format "Jan 2, 2006" }}</span>
-	  <span>{{ .WordCount }} Words</span>
+<a class="post-list-item" href="{{ .Permalink }}">
+	<h4 class="title">{{ .Title }}</h4>
+	<h6 class="subtitle">{{ .Summary }}</h6>
+	<div class="tag-list">
+		<div class="tag">{{ .ReadingTime }} Minutes</div>
+		<div class="tag">{{ .Date.Format "Jan 2, 2006" }}</div>
+		<div class="tag">{{ .WordCount }} Words</div>
 	</div>
-  </a>
+</a>

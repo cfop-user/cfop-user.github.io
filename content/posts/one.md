@@ -1,8 +1,7 @@
 +++
 date = '2025-01-28T15:04:24Z'
 draft = true
-title = 'One'
+title = 'Page One'
 +++
-# This is a header
-and a test
-_and_ markdown
+# Header for First Post
+First content example...

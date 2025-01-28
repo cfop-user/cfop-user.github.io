@@ -2,57 +2,64 @@
 <html>
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
-	<link rel="stylesheet" href="/styles.css">
+	
+	
+	<link rel="stylesheet" href="/styles.css"> 
+	
     <title>
       Title test
     </title>
   </head>
-  <body>
-	<nav>
-	<div>
-	  <a href="/">
-		Title test
-	  </a>
-	</div>
-  
-	<div>
-	  <a href="/">
-		Home
-	  </a>
-	  <a href="/posts">
-		Posts
-	  </a>
-	</div>
-  </nav>
-    
-<section>
-  <h1>One</h1>
-  <div>
-    <article>
-      <h1 id="this-is-a-header">This is a header</h1>
-<p>and a test
-<em>and</em> markdown</p>
+  <body class="theme-raspberry">
+	<nav class="navbar">
+	<div class="container">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="/">
+				Title test
+			</a>
+		</div>
 
-    </article>
-  </div>
-</section>
-<aside>
-  <div>
-    <section>
-      <h4>Tue Jan 28, 2025</h4>
-      <h5>9 Words</h5>
-    </section>
-  </div>
-  <div>
+		<div class="navbar-start">
+			<a class="navbar-item" href="/">
+				Home
+			</a>
+			<a class="navbar-item" href="/posts">
+				Posts
+			</a>
+		</div>
+	</div>
+</nav>
+	<div class="mainbody">
     
-    
-  </div>
-</aside>
+<main class="container">
+	<h1 class="title">Page One</h1>
+	<div class="tag-list">
+		<div class="tag">1 Minutes</div>
+		<div class="tag">Jan 28, 2025</div>
+		<div class="tag">7 Words</div>
+	</div>
 
-	<footer>
+	<article class="content">
+		<h1 id="header-for-first-post">Header for First Post</h1>
+<p>First content example&hellip;</p>
+
+	</article>
+	<div class="">
+		<ul>
+			
+			<li>Previous Post: <a class="previous" href="http://localhost:1313/posts/programming/test/">Second Page</a></li>
+			
+			
+		</ul>
+	</div>
+
+</main>
+
+	<footer class="footer">
 	<p>
-	  Copyright &copy; 2025 Title test | All rights reserved.
+		Copyright &copy; 2025 Title test | All rights reserved.
 	</p>
-  </footer>
+</footer>
+	</div>
   </body>
 </html>

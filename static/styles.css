@@ -1,3 +1,263 @@
-body {
-	background-color: paleturquoise;
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand");
+@import url("https://fonts.googleapis.com/css2?family=Cardo");
+@import url("https://fonts.googleapis.com/css2?family=Spectral");
+.theme-light {
+  --primary-color: #212729;
+  --primary-bg: #e4e6e7;
+  --primary-accent: #b5dce7;
+  --secondary-color: var(--primary-bg);
+  --secondary-bg: var(--primary-color);
+  --secondary-accent: #3fa7a7;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
+
+.theme-dark {
+  --primary-color: #e4e6e7;
+  --primary-bg: #212729;
+  --primary-accent: #317486;
+  --secondary-color: white;
+  --secondary-bg: rgb(18.36, 24.48, 27.54);
+  --secondary-accent: #408b8b;
+  --tertiary-color: rgb(91.8, 122.4, 137.7);
+  --tertiary-bg: #c6d1d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
+
+.theme-raspberry {
+  --primary-color: #dbd2d4;
+  --primary-bg: #19030b;
+  --primary-accent: #d32274;
+  --secondary-color: #white;
+  --secondary-bg: #4d1126;
+  --secondary-accent: #ea799f;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #c1638283;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
+}
+
+.theme-cherry-blossom {
+  --primary-color: #212729;
+  --primary-bg: #fff;
+  --primary-accent: hotpink;
+  --secondary-color: #511b36;
+  --secondary-bg: rgb(248.25, 216.75, 232.5);
+  --secondary-accent: hotpink;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #d1c6d1;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-sepia {
+  --primary-color: #482005;
+  --primary-bg: #f0e8e0;
+  --primary-bg: #eee0cb;
+  --primary-accent: rgb(192, 130, 106);
+  --secondary-color: white;
+  --secondary-bg: rgb(179.1, 135.7, 118.9);
+  --secondary-bg: color-mix(in srgb, #c2847a, var(--primary-bg));
+  --secondary-accent: rgb(131.2886792453, 49.4073277753, 17.7113207547);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #bdb19f;
+  --tertiary-bg: #baa898;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-jest {
+  --primary-color: #750b4c;
+  --primary-bg: #ffe8f3;
+  --primary-accent: rgb(238, 170, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #475d43;
+  --secondary-accent: rgb(197, 234, 197);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-emerald {
+  --primary-color: #7cbd97;
+  --primary-bg: #10351c;
+  --primary-accent: rgb(170, 238, 191);
+  --secondary-color: #fff;
+  --secondary-bg: #071f0e;
+  --secondary-accent: rgb(113, 207, 113);
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #a2ad917d;
+  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+}
+
+.theme-grape {
+  --primary-color: #303085;
+  --primary-bg: #b7b7d6;
+  --primary-accent: rgb(145, 97, 204);
+  --secondary-color: #fff;
+  --secondary-bg: #6c4879;
+  --secondary-accent: #ab7eeb;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #6a48797b;
+  --tertiary-accent: #dcc8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*:root {
+  --nav-width: 20vw;
+  --primary-font: "Cardo";
+  --sans-font: "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
+  --header-font: "Spectral", "Playfair Display", "Julius sans one";
+  --logo-font: "Playfair display";
+  --main-font-size: 18px;
+  font-size: var(--main-font-size);
+  /* to set rem */
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary-bg);
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  font-size: 1rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+body a {
+  color: var(--primary-color);
+}
+body > * {
+  flex-grow: 1;
+}
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+.navbar {
+  font-family: var(--sans-font);
+  text-transform: uppercase;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: max-content;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--secondary-bg);
+  color: var(--secondary-color);
+  position: sticky;
+  padding: 3em 1.4em 3em 1.4em;
+  /* underline effect */
+  /* more nav stuff */
+}
+.navbar * {
+  display: block;
+  line-height: 2;
+  letter-spacing: 0.1em;
+}
+.navbar a, .navbar #blog-button {
+  text-decoration: none;
+  color: inherit;
+  width: max-content;
+  text-wrap: pretty;
+}
+.navbar a {
+  background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, color-mix(in srgb, var(--secondary-accent), var(--primary-bg)), var(--secondary-accent));
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  opacity: 0.75;
+  transition-property: opacity, background-position;
+  transition: 200ms ease-in-out;
+}
+.navbar a, .navbar #blog-button {
+  font-weight: 800;
+}
+.navbar a:not(a#blog-button):hover {
+  background-size: 0 3px, 100% 3px;
+  opacity: 1;
+}
+.navbar li a {
+  margin-left: 1em;
+}
+.navbar a#home-link {
+  letter-spacing: 0.2em;
+  font-size: 1.3em;
+  font-weight: 800;
+  opacity: unset;
+}
+.navbar a.active {
+  color: var(--secondary-accent);
+  opacity: 1;
+}
+
+.mainbody {
+  flex-grow: 7;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.mainbody main {
+  padding: 3rem;
+  overflow-y: auto;
+  height: max-content;
+  grid-column: 2;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+}
+.mainbody .footer {
+  display: block;
+  width: 100%;
+  padding-block: 0.3rem;
+}
+.mainbody .footer p {
+  display: block;
+  width: 50%;
+  margin: auto;
+}
+
+.tag-list {
+  display: flex;
+  gap: 0.5rem;
+}
+.tag-list .tag {
+  background-color: color-mix(in oklab, var(--primary-accent), transparent 70%);
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 2rem;
+  display: block;
+  width: fit-content;
+}
+
+a:has(.tag) {
+  text-decoration: none;
+}
+
+.post-list {
+  font-size: 0.8rem;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.post-list .post-list-item {
+  display: block;
+  background-color: color-mix(in srgb, var(--secondary-bg), transparent 20%);
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  padding-block: 1rem;
+}
+.post-list .post-list-item .title {
+  margin-block: 0;
+  opacity: 0.8;
+  font-family: var(--sans-font);
+}
+
+/*# sourceMappingURL=styles.css.map */

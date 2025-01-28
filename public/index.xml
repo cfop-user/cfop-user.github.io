@@ -9,11 +9,18 @@
     <lastBuildDate>Tue, 28 Jan 2025 15:04:24 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>One</title>
+      <title>Page One</title>
       <link>http://localhost:1313/posts/one/</link>
       <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
       <guid>http://localhost:1313/posts/one/</guid>
-      <description>&lt;h1 id=&#34;this-is-a-header&#34;&gt;This is a header&lt;/h1&gt;&#xA;&lt;p&gt;and a test&#xA;&lt;em&gt;and&lt;/em&gt; markdown&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;header-for-first-post&#34;&gt;Header for First Post&lt;/h1&gt;&#xA;&lt;p&gt;First content example&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Second Page</title>
+      <link>http://localhost:1313/posts/programming/test/</link>
+      <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
+      <guid>http://localhost:1313/posts/programming/test/</guid>
+      <description>&lt;h1 id=&#34;header-test-for-second-program-one&#34;&gt;Header test for second program one&lt;/h1&gt;&#xA;&lt;p&gt;content for that same one&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
