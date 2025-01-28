@@ -2,11 +2,10 @@
 <section class="section">
 	<main class="container">
 		<div class="post-list">
-			{{ range .Site.Sections }}
-				<h2 class = "section-name-headers"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-				{{ range first 5 .Pages }}
-					{{ .Render "summary" }}
-				{{ end }}
+			{{ $section := .Section }}
+			{{ $pages := .Site.GetPage "section" $section }}
+			{{ range $pages.Pages }}
+				{{ .Render "summary" }}
 			{{ end }}
 		</div>
 	</main>

@@ -10,6 +10,19 @@
       Title test
     </title>
 	
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+
+  
+
   </head>
   <body class="theme-light">
 	<nav class="navbar">
@@ -25,6 +38,10 @@
 				Home
 			</a>
 			
+			<a class="navbar-item" href="http://localhost:1313/mathematics/">Mathematics</a>
+			
+			<a class="navbar-item" href="http://localhost:1313/novel-stuff/">Novel Stuff</a>
+			
 			<a class="navbar-item" href="http://localhost:1313/poems/">Poems</a>
 			
 			<a class="navbar-item" href="http://localhost:1313/posts/">Posts</a>
@@ -37,37 +54,41 @@
 	<div class="mainbody">
     
 <section class="section">
-  <main class="container">
-    <h1 class="title">Posts</h1>
-	<div class="post-list">
-		
+	<main class="container">
+		<div class="post-list">
 			
-		<a class="post-list-item" href="http://localhost:1313/posts/one/">
+			
+			
+				<a class="post-list-item" href="http://localhost:1313/posts/one/">
 	<h4 class="title">Page One</h4>
-	<p class="content shortened"><h1 id="header-for-first-post">Header for First Post</h1>
+	<div class="preview">
+		<p class="content shortened"><h1 id="header-for-first-post">Header for First Post</h1>
 <p>First content example for a root-level post that goes for a few lines then is truncated</p></p>
-	
+		
+	</div>
 	<div class="tag-list">
 		<div class="tag">1 Minutes</div>
 		<div class="tag">Jan 28, 2025</div>
-		<div class="tag">20 Words</div>
+		<div class="tag">21 Words</div>
 	</div>
 </a>
 			
-		<a class="post-list-item" href="http://localhost:1313/posts/programming/test/">
+				<a class="post-list-item" href="http://localhost:1313/posts/programming/test/">
 	<h4 class="title">Second Page</h4>
-	<p class="content shortened"><h1 id="header-test-for-second-program-one">Header test for second program one</h1>
+	<div class="preview">
+		<p class="content shortened"><h1 id="header-test-for-second-program-one">Header test for second program one</h1>
 <p>content for that same one</p></p>
-	
+		
+	</div>
 	<div class="tag-list">
 		<div class="tag">1 Minutes</div>
 		<div class="tag">Jan 28, 2025</div>
 		<div class="tag">11 Words</div>
 	</div>
 </a>
-		
-	</div>
-  </main>
+			
+		</div>
+	</main>
 </section>
 
 	<footer class="footer">

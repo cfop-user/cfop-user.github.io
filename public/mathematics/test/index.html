@@ -15,7 +15,7 @@
   MathJax = {
     tex: {
       displayMath: [['\\[', '\\]'], ['$$', '$$']],  
-      inlineMath: [['\\(', '\\)']]                  
+      inlineMath: [['\\(', '\\)'], ['$','$']]                  
     }
   };
 </script>
@@ -54,24 +54,22 @@
 	<div class="mainbody">
     
 <main class="container">
-	<h1 class="title">Page One</h1>
+	<h1 class="title">Test</h1>
 	<div class="tag-list">
 		<div class="tag">1 Minutes</div>
 		<div class="tag">Jan 28, 2025</div>
-		<div class="tag">21 Words</div>
+		<div class="tag">182 Words</div>
 	</div>
 
 	<article class="content">
-		<h1 id="header-for-first-post">Header for First Post</h1>
-<p>First content example for a root-level post that goes for a few lines then is truncated</p>
-<blockquote>
-<p>BlockQuote!</p>
-</blockquote>
+		<h2 id="lemma-12">Lemma 1.2</h2>
+<p><strong>Claim:</strong>
+The arithmetic mean of two distinct real numbers lies between them exclusively.</p>
+<p><strong>Proof:</strong>
+Let $p$ be a real number. We will show that for some real number $m$, either $m < p$ or $p< m$ is true. Since $p-m \in \mathbb{R}$, the usual axioms of real numbers apply to $p-m$. By <em>R1</em>, exactly one of the following is true: $0 < p-m$, $p-m=0$, or $p-m < 0$. Applying <em>R3</em> with $c = m$ shows that exactly one of the following is true: $m < p$, $p=m$, or $p < m$. It follows that $p \neq m \implies (m < p) \lor (p < m)$. From this we take $q \in \mathbb{R}$, with $p < q$, arbritarily. Note that $p + p < q + p$ (by R5), i.e, $2p < p + q$. Similarly, $p + q < q + q$, which is equivalent to $p + q < 2q$. Hence, $2p < p + q < 2q$. Applying <em>Proposition 3.4</em> with $x=1/2$ gives $p < \frac{p+q}{2} < q$, where $\frac{p+q}{2}$ is the arithmetic mean by definition. $\ \square$</p>
 	</article>
 	<div class="">
 		<ul>
-			
-			<li>Previous Post: <a class="previous" href="http://localhost:1313/posts/programming/test/">Second Page</a></li>
 			
 			
 		</ul>

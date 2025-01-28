@@ -1,12 +1,14 @@
-<a class="post-list-item" href="{{ .Permalink }}">
-	<h4 class="title">{{ .Title }}</h4>
-	<p class="content shortened">{{ .Summary }}</p>
-	<!-- ^ atm this creates a blank p.content.shortened,
-	  and a summary in it's own p.
-	 -->
+<div class="post-list-item" href="{{ .Permalink }}">
+	<h4 class="title"><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
+	<div class="preview">
+		{{ .Summary }}
+		{{ if .Truncated }}
+		  <a class="more-link" href="{{ .RelPermalink }}">More ...</a>
+		{{ end }}
+	</div>
 	<div class="tag-list">
 		<div class="tag">{{ .ReadingTime }} Minutes</div>
 		<div class="tag">{{ .Date.Format "Jan 2, 2006" }}</div>
 		<div class="tag">{{ .WordCount }} Words</div>
 	</div>
-</a>
+</div>

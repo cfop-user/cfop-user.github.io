@@ -9,7 +9,10 @@
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
-	
+	{{ if .Param "math" }}
+    {{ partialCached "math.html" . }}
+  {{ end }}
+
   </head>
   <body class="theme-light">
 	{{ partial "navbar.html" . }}
