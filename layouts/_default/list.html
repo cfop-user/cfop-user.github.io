@@ -1,12 +1,14 @@
 {{ define "main" }}
 <section class="section">
-  <main class="container">
-    <h1 class="title">{{ .Title }}</h1>
-	<div class="post-list">
-		{{ range first 5 .Site.RegularPages }}
-		{{ .Render "summary" }}
-		{{ end }}
-	</div>
-  </main>
+	<main class="container">
+		<div class="post-list">
+			{{ range .Site.Sections }}
+				<h2 class = "section-name-headers"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+				{{ range first 5 .Pages }}
+					{{ .Render "summary" }}
+				{{ end }}
+			{{ end }}
+		</div>
+	</main>
 </section>
 {{ end }}

@@ -101,6 +101,36 @@
   --tertiary-accent: #dcc8ff;
 }
 
+.theme-options {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 2em;
+  padding: 2em;
+  border-radius: 0rem;
+  /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
+}
+.theme-options .theme-item {
+  box-sizing: border-box;
+  position: relative;
+  color: var(--primary-color);
+  font-size: 1.5em;
+  user-select: none;
+  background-color: var(--primary-bg);
+  position: relative;
+  padding: 2rem;
+  padding-right: 3rem;
+  text-decoration: var(--primary-accent) 2px underline;
+  text-underline-offset: 0.25em;
+  --middle: 70%;
+  --right: 95%;
+  background: linear-gradient(45deg, var(--primary-bg) var(--middle), var(--secondary-bg) var(--middle), var(--secondary-bg) var(--right), var(--tertiary-bg) var(--right));
+}
+.theme-options .theme-item.active {
+  border: 3px outset var(--primary-accent);
+  box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
+}
+
 * {
   box-sizing: border-box;
 }
@@ -161,7 +191,8 @@ body {
   line-height: 2;
   letter-spacing: 0.1em;
 }
-.navbar a, .navbar #blog-button {
+.navbar a,
+.navbar #blog-button {
   text-decoration: none;
   color: inherit;
   width: max-content;
@@ -176,7 +207,8 @@ body {
   transition-property: opacity, background-position;
   transition: 200ms ease-in-out;
 }
-.navbar a, .navbar #blog-button {
+.navbar a,
+.navbar #blog-button {
   font-weight: 800;
 }
 .navbar a:not(a#blog-button):hover {
@@ -202,6 +234,9 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+.mainbody > h1 {
+  padding-inline: 2rem;
 }
 .mainbody main {
   padding: 3rem;
@@ -236,10 +271,6 @@ body {
   width: fit-content;
 }
 
-a:has(.tag) {
-  text-decoration: none;
-}
-
 .post-list {
   font-size: 0.8rem;
   display: block;
@@ -253,11 +284,24 @@ a:has(.tag) {
   padding-block: 0.5rem;
   padding-inline: 1rem;
   padding-block: 1rem;
+  color: var(--secondary-color);
 }
 .post-list .post-list-item .title {
   margin-block: 0;
   opacity: 0.8;
   font-family: var(--sans-font);
+}
+.post-list a {
+  text-decoration: none;
+}
+.post-list .section-name-headers a {
+  text-decoration: underline solid 2px var(--secondary-accent);
+}
+.post-list .content.shortened {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 5em;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -9,8 +9,9 @@
     <title>{{ block "title" . }}
       {{ .Site.Title }}
     {{ end }}</title>
+	
   </head>
-  <body class="theme-raspberry">
+  <body class="theme-light">
 	{{ partial "navbar.html" . }}
 	<div class="mainbody">
     {{ block "main" . }}
@@ -18,5 +19,6 @@
     {{ end }}
 	{{ partial "footer.html" . }}
 	</div>
+	<script type="module" src="{{ "main.js" | relURL }}"></script>
   </body>
 </html>

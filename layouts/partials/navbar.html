@@ -10,9 +10,9 @@
 			<a class="navbar-item" href="/">
 				Home
 			</a>
-			<a class="navbar-item" href="/posts">
-				Posts
-			</a>
+			{{ range .Site.Sections }}
+			<a class="navbar-item" href="{{ .Permalink }}">{{ .Title }}</a>
+			{{ end }}
 		</div>
 	</div>
 </nav>

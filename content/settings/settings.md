@@ -1,0 +1,4 @@
+---
+layout: settings
+---
+# Settings

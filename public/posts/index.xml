@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/one/</link>
       <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
       <guid>http://localhost:1313/posts/one/</guid>
-      <description>&lt;h1 id=&#34;header-for-first-post&#34;&gt;Header for First Post&lt;/h1&gt;&#xA;&lt;p&gt;First content example&amp;hellip;&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;header-for-first-post&#34;&gt;Header for First Post&lt;/h1&gt;&#xA;&lt;p&gt;First content example for a root-level post that goes for a few lines then is truncated&lt;/p&gt;</description>
     </item>
     <item>
       <title>Second Page</title>

@@ -1,6 +1,9 @@
 <a class="post-list-item" href="{{ .Permalink }}">
 	<h4 class="title">{{ .Title }}</h4>
-	<h6 class="subtitle">{{ .Summary }}</h6>
+	<p class="content shortened">{{ .Summary }}</p>
+	<!-- ^ atm this creates a blank p.content.shortened,
+	  and a summary in it's own p.
+	 -->
 	<div class="tag-list">
 		<div class="tag">{{ .ReadingTime }} Minutes</div>
 		<div class="tag">{{ .Date.Format "Jan 2, 2006" }}</div>

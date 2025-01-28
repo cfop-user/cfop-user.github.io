@@ -3,13 +3,16 @@
   <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
 	
-	<link rel="stylesheet" href="/styles.css">
+	
+	<link rel="stylesheet" href="/styles.css"> 
+	
     <title>
       Title test
     </title>
+	
   </head>
-  <body>
-	<nav class="navbar is-dark">
+  <body class="theme-light">
+	<nav class="navbar">
 	<div class="container">
 		<div class="navbar-brand">
 			<a class="navbar-item" href="/">
@@ -21,26 +24,83 @@
 			<a class="navbar-item" href="/">
 				Home
 			</a>
-			<a class="navbar-item" href="/posts">
-				Posts
-			</a>
+			
+			<a class="navbar-item" href="http://localhost:1313/poems/">Poems</a>
+			
+			<a class="navbar-item" href="http://localhost:1313/posts/">Posts</a>
+			
+			<a class="navbar-item" href="http://localhost:1313/settings/">Settings</a>
+			
 		</div>
 	</div>
 </nav>
+	<div class="mainbody">
     
 <section class="section">
-  <main class="container">
-    <h1 class="title">Tags</h1>
-    <div>
-      
-    </div>
-  </main>
+	<main class="container">
+		<div class="post-list">
+			
+				<h2 class = "section-name-headers"><a href="http://localhost:1313/poems/">Poems</a></h2>
+				
+					<a class="post-list-item" href="http://localhost:1313/poems/test/">
+	<h4 class="title">t is Poem page One</h4>
+	<p class="content shortened"><h1 id="header-for-first-poem-page">Header for First poem page</h1>
+<p>First content example is a long, long
+string of text that strethces on</p></p>
+</a>
+				
+			
+				<h2 class = "section-name-headers"><a href="http://localhost:1313/posts/">Posts</a></h2>
+				
+					<a class="post-list-item" href="http://localhost:1313/posts/one/">
+	<h4 class="title">Page One</h4>
+	<p class="content shortened"><h1 id="header-for-first-post">Header for First Post</h1>
+<p>First content example for a root-level post that goes for a few lines then is truncated</p></p>
+	
+	<div class="tag-list">
+		<div class="tag">1 Minutes</div>
+		<div class="tag">Jan 28, 2025</div>
+		<div class="tag">20 Words</div>
+	</div>
+</a>
+				
+					<a class="post-list-item" href="http://localhost:1313/posts/programming/test/">
+	<h4 class="title">Second Page</h4>
+	<p class="content shortened"><h1 id="header-test-for-second-program-one">Header test for second program one</h1>
+<p>content for that same one</p></p>
+	
+	<div class="tag-list">
+		<div class="tag">1 Minutes</div>
+		<div class="tag">Jan 28, 2025</div>
+		<div class="tag">11 Words</div>
+	</div>
+</a>
+				
+			
+				<h2 class = "section-name-headers"><a href="http://localhost:1313/settings/">Settings</a></h2>
+				
+					<a class="post-list-item" href="http://localhost:1313/settings/settings/">
+	<h4 class="title"></h4>
+	<p class="content shortened"><h1 id="settings">Settings</h1></p>
+	
+	<div class="tag-list">
+		<div class="tag">1 Minutes</div>
+		<div class="tag">Jan 1, 0001</div>
+		<div class="tag">1 Words</div>
+	</div>
+</a>
+				
+			
+		</div>
+	</main>
 </section>
 
-	<footer class="footer has-text-centered">
+	<footer class="footer">
 	<p>
 		Copyright &copy; 2025 Title test | All rights reserved.
 	</p>
 </footer>
+	</div>
+	<script type="module" src="/main.js"></script>
   </body>
 </html>

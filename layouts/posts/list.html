@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="section">
+  <main class="container">
+    <h1 class="title">{{ .Title }}</h1>
+	<div class="post-list">
+		{{ $pages := .Site.GetPage "section" "posts" }}
+		{{ range $pages.Pages }}	
+		{{ .Render "summary" }}
+		{{ end }}
+	</div>
+  </main>
+</section>
+{{ end }}
