@@ -27,42 +27,45 @@
   <body class="theme-light">
 	<nav class="navbar">
 	<div class="container">
-		<div class="navbar-brand">
-			<a class="navbar-item" href="/">
-				Title test
-			</a>
-		</div>
-
-		<div class="navbar-start">
-			<a class="navbar-item" href="/">
-				Home
-			</a>
-			
-			<a class="navbar-item" href="http://localhost:1313/posts/">Posts</a>
-			
-			<a class="navbar-item" href="http://localhost:1313/mathematics/">Mathematics</a>
-			
-			<a class="navbar-item" href="http://localhost:1313/novel-stuff/">Novel Stuff</a>
-			
-			<a class="navbar-item" href="http://localhost:1313/poems/">Poems</a>
-			
-			<a class="navbar-item" href="http://localhost:1313/settings/">Settings</a>
-			
-		</div>
+		<a class="navbar-item navbar-logo" href="/">
+			Title test
+		</a>
+		<a class="navbar-item" href="/">
+			Home
+		</a>
+		
+		<a class="navbar-item" href="//localhost:1313/poems/">Poems</a>
+		
+		<a class="navbar-item" href="//localhost:1313/posts/">Posts</a>
+		
+		<a class="navbar-item" href="//localhost:1313/mathematics/">Mathematics</a>
+		
+		<a class="navbar-item" href="//localhost:1313/novel-stuff/">Novel Stuff</a>
+		
+		<a class="navbar-item" href="//localhost:1313/settings/">Settings</a>
+		
 	</div>
 </nav>
 	<div class="mainbody">
     
 <main class="container">
-	<h1 class="title">Test</h1>
+	<h1 class="title">Proof that there are infinitely many rational numbers between any two real numbers</h1>
 	<div class="tag-list">
-		<div class="tag">2 Minutes</div>
+		<div class="tag">3 Minutes</div>
 		<div class="tag">Jan 28, 2025</div>
-		<div class="tag">403 Words</div>
+		<div class="tag">497 Words</div>
 	</div>
 
 	<article class="content">
-		<h2 id="lemma-11">Lemma 1.1</h2>
+		<p>For this proof I will assume the Field axioms, as well as the following, defined for a field $F$:</p>
+<ul>
+<li>(R1) If x ∈ F, then exactly one of the following is true: $0 < x$, $x = 0$, or $x < 0$.</li>
+<li>(R2) If $y < x$, then $−x < −y$.</li>
+<li>(R3) If $x < y$, and $c \in F$, then $x + c < y + c$</li>
+<li>(R4) If $0 < x$ and $0 < y$ then $0 < xy$.</li>
+<li>(R5) If $x < y$ and $y < z$ then $x < z$.</li>
+</ul>
+<h2 id="lemma-11">Lemma 1.1</h2>
 <p><strong>Claim:</strong> $(A \subseteq B) \land (B \subseteq C) \implies A \subseteq C$ for all sets $A,B,$ and $C$.</p>
 <p><strong>Proof:</strong>
 Let $A$, $B$, and $C$ be sets with $(A \subseteq B)$ and $(B \subseteq C)$.

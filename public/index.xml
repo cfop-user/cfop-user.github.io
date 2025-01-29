@@ -2,46 +2,67 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Title test</title>
-    <link>http://localhost:1313/</link>
+    <link>//localhost:1313/</link>
     <description>Recent content on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Jan 2025 23:18:36 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/mathematics/test/</link>
+      <title>Proof that there are infinitely many rational numbers between any two real numbers</title>
+      <link>//localhost:1313/mathematics/rational/</link>
       <pubDate>Tue, 28 Jan 2025 23:18:36 +0000</pubDate>
-      <guid>http://localhost:1313/mathematics/test/</guid>
-      <description>&lt;h2 id=&#34;lemma-12&#34;&gt;Lemma 1.2&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Claim:&lt;/strong&gt;&#xA;The arithmetic mean of two distinct real numbers lies between them exclusively.&lt;/p&gt;</description>
+      <guid>//localhost:1313/mathematics/rational/</guid>
+      <description>&lt;p&gt;For this proof I will assume the Field axioms, as well as the following, defined for a field $F$:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Amethyst</title>
+      <link>//localhost:1313/novel-stuff/amethyst/</link>
+      <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
+      <guid>//localhost:1313/novel-stuff/amethyst/</guid>
+      <description>&lt;p&gt;To be explained&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Oriole</title>
+      <link>//localhost:1313/novel-stuff/oriole/</link>
+      <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
+      <guid>//localhost:1313/novel-stuff/oriole/</guid>
+      <description>&lt;p&gt;To be explained&lt;/p&gt;</description>
     </item>
     <item>
       <title>Wips</title>
-      <link>http://localhost:1313/novel-stuff/wips/</link>
+      <link>//localhost:1313/novel-stuff/wips/</link>
       <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
-      <guid>http://localhost:1313/novel-stuff/wips/</guid>
+      <guid>//localhost:1313/novel-stuff/wips/</guid>
       <description>&lt;h1 id=&#34;breakdown&#34;&gt;Breakdown&lt;/h1&gt;</description>
     </item>
     <item>
       <title>Page One</title>
-      <link>http://localhost:1313/posts/one/</link>
+      <link>//localhost:1313/posts/one/</link>
       <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
-      <guid>http://localhost:1313/posts/one/</guid>
+      <guid>//localhost:1313/posts/one/</guid>
       <description>&lt;h1 id=&#34;header-for-first-post&#34;&gt;Header for First Post&lt;/h1&gt;&#xA;&lt;p&gt;First content example for a root-level post that goes for a few lines then is truncated&lt;/p&gt;</description>
     </item>
     <item>
       <title>Poem page One</title>
-      <link>http://localhost:1313/poems/test/</link>
+      <link>//localhost:1313/poems/test/</link>
       <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
-      <guid>http://localhost:1313/poems/test/</guid>
+      <guid>//localhost:1313/poems/test/</guid>
       <description>&lt;h1 id=&#34;header-for-first-poem-page&#34;&gt;Header for First poem page&lt;/h1&gt;&#xA;&lt;p&gt;First content example is a long, long&#xA;string of text that strethces on&lt;/p&gt;</description>
     </item>
     <item>
       <title>Second Page</title>
-      <link>http://localhost:1313/posts/programming/test/</link>
+      <link>//localhost:1313/posts/programming/test/</link>
       <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
-      <guid>http://localhost:1313/posts/programming/test/</guid>
+      <guid>//localhost:1313/posts/programming/test/</guid>
       <description>&lt;h1 id=&#34;header-test-for-second-program-one&#34;&gt;Header test for second program one&lt;/h1&gt;&#xA;&lt;p&gt;content for that same one&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three point one</title>
+      <link>//localhost:1313/poems/section-3/poem-3.1/</link>
+      <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
+      <guid>//localhost:1313/poems/section-3/poem-3.1/</guid>
+      <description>&lt;p&gt;words&#xA;words&#xA;words&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

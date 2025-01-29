@@ -1,13 +1,9 @@
 {{ define "main" }}
-<section class="section">
-	<main class="container">
-		<div class="post-list">
-			{{ $section := .Section }}
-			{{ $pages := .Site.GetPage "section" $section }}
-			{{ range $pages.Pages }}
-				{{ .Render "summary" }}
-			{{ end }}
-		</div>
+	<main class="post-list">
+		{{ $section := .Section }}
+		{{ $pages := .Site.GetPage "section" $section }}
+		{{ range $pages.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
 	</main>
-</section>
 {{ end }}

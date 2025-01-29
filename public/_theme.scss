@@ -12,7 +12,7 @@
 	--secondary-accent: #3fa7a7;
 
 	// tertiary 
-	--tertiary-color: var(--secondary-color);
+	--tertiary-color: var(--primary-color);
 	--tertiary-bg: #c6d1d1;
 	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent))
 }
@@ -69,9 +69,9 @@
 	--secondary-accent: #{$base-accent};
 
 	// tertiary 
-	--tertiary-color: var(--secondary-color);
-	--tertiary-bg: #d1c6d1;
-	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+	--tertiary-color: white;
+	--tertiary-bg: #ca9dbc;
+	--tertiary-accent: rgb(255, 178, 216);
 }
 
 .theme-sepia {
@@ -112,7 +112,7 @@
 	// tertiary 
 	--tertiary-color: var(--secondary-color);
 	--tertiary-bg: #a2ad917d;
-	--tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+	--tertiary-accent: color-mix(in srgb, var(--secondary-color), var(--secondary-accent));
 }
 
 .theme-emerald {

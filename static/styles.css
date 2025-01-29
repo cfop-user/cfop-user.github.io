@@ -10,7 +10,7 @@
   --secondary-color: var(--primary-bg);
   --secondary-bg: var(--primary-color);
   --secondary-accent: #3fa7a7;
-  --tertiary-color: var(--secondary-color);
+  --tertiary-color: var(--primary-color);
   --tertiary-bg: #c6d1d1;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
@@ -46,9 +46,9 @@
   --secondary-color: #511b36;
   --secondary-bg: rgb(248.25, 216.75, 232.5);
   --secondary-accent: hotpink;
-  --tertiary-color: var(--secondary-color);
-  --tertiary-bg: #d1c6d1;
-  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+  --tertiary-color: white;
+  --tertiary-bg: #ca9dbc;
+  --tertiary-accent: rgb(255, 178, 216);
 }
 
 .theme-sepia {
@@ -75,7 +75,7 @@
   --secondary-accent: rgb(197, 234, 197);
   --tertiary-color: var(--secondary-color);
   --tertiary-bg: #a2ad917d;
-  --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent));
+  --tertiary-accent: color-mix(in srgb, var(--secondary-color), var(--secondary-accent));
 }
 
 .theme-emerald {
@@ -156,15 +156,10 @@ body {
   color: var(--primary-color);
   font-size: 1rem;
   overflow: scroll;
-  display: flex;
-  flex-direction: row;
   min-height: 100vh;
 }
 body a {
   color: var(--primary-color);
-}
-body > * {
-  flex-grow: 1;
 }
 
 body {
@@ -177,11 +172,12 @@ body {
   font-weight: 100;
   text-transform: uppercase;
   box-sizing: border-box;
-  width: max-content;
-  min-width: max-content;
+  width: var(--nav-width);
+  min-width: min-content;
   display: flex;
   flex-direction: column;
-  position: sticky;
+  position: fixed;
+  height: 100vh;
   padding: 3em 1.4em 3em 1.4em;
   background-color: var(--secondary-bg);
   color: var(--secondary-color);
@@ -193,6 +189,12 @@ body {
   line-height: 2;
   letter-spacing: 0.1em;
 }
+.navbar .navbar-item.navbar-logo {
+  font-size: 2.4rem;
+  font-family: var(--logo-font);
+  text-transform: capitalize;
+  margin-block: 2rem;
+}
 .navbar a,
 .navbar #blog-button {
   text-decoration: none;
@@ -200,7 +202,7 @@ body {
   width: max-content;
   text-wrap: pretty;
 }
-.navbar a {
+.navbar .navbar-item {
   background: linear-gradient(to right, transparent, transparent), linear-gradient(to right, color-mix(in srgb, var(--secondary-accent), var(--primary-bg)), var(--secondary-accent));
   background-size: 100% 3px, 0 3px;
   background-position: 100% 100%, 0 100%;
@@ -208,12 +210,13 @@ body {
   opacity: 0.75;
   transition-property: opacity, background-position;
   transition: 200ms ease-in-out;
+  margin-block: 0.3em;
 }
 .navbar a,
 .navbar #blog-button {
   font-weight: 800;
 }
-.navbar a:not(a#blog-button):hover {
+.navbar a:not(.navbar-logo):hover {
   background-size: 0 3px, 100% 3px;
   opacity: 1;
 }
@@ -232,10 +235,12 @@ body {
 }
 
 .mainbody {
-  flex-grow: 7;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  width: calc(100vw - var(--nav-width));
+  margin-right: 0;
+  margin-left: auto;
 }
 .mainbody > h1 {
   padding-inline: 2rem;
@@ -281,12 +286,13 @@ body {
   gap: 1rem;
 }
 .post-list .post-list-item {
-  --darker: color-mix(in oklab, var(--primary-accent), transparent 65%);
+  --tertiary-low-op: color-mix(in oklab, var(--tertiary-bg), transparent 5%);
   display: block;
   background-color: color-mix(in srgb, var(--secondary-bg), transparent 20%);
   padding-block: 0.5rem;
   padding-inline: 1rem;
   padding-block: 1rem;
+  margin-bottom: 2rem;
   color: var(--secondary-color);
 }
 .post-list .post-list-item a {
@@ -298,9 +304,12 @@ body {
   font-family: var(--sans-font);
   text-transform: uppercase;
   font-size: 1.15rem;
+  width: 60%;
+  text-wrap: pretty;
 }
 .post-list .post-list-item .preview {
-  background-color: var(--darker);
+  background-color: var(--tertiary-low-op);
+  color: var(--tertiary-color);
   opacity: 0.8;
   height: max-content;
   padding-inline: 1rem;
@@ -317,10 +326,12 @@ body {
   font-size: 1.1rem;
 }
 .post-list .post-list-item .preview .more-link {
-  text-decoration: underline 2px var(--primary-accent);
+  color: var(--tertiary-color);
+  text-decoration: underline 2px color-mix(in srgb, var(--tertiary-accent), var(--tertiary-color));
 }
 .post-list .post-list-item .tag {
-  background-color: var(--darker);
+  background-color: var(--tertiary-low-op);
+  color: var(--tertiary-color);
 }
 .post-list a {
   text-decoration: none;
