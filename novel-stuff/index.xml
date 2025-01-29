@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Novel Stuff on Title test</title>
-    <link>/novel-stuff/</link>
+    <link>https://benolanlokun.com/novel-stuff/</link>
     <description>Recent content in Novel Stuff on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="/novel-stuff/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://benolanlokun.com/novel-stuff/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

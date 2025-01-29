@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Settings on Title test</title>
-    <link>/settings/</link>
+    <link>https://benolanlokun.com/settings/</link>
     <description>Recent content in Settings on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="/settings/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://benolanlokun.com/settings/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
