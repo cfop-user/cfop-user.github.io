@@ -1,1 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Novel Stuff on Title test</title><link>/novel-stuff/</link><description>Recent content in Novel Stuff on Title test</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="/novel-stuff/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Novel Stuff on Title test</title>
+    <link>//localhost:1313/novel-stuff/</link>
+    <description>Recent content in Novel Stuff on Title test</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Jan 2025 20:24:53 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/novel-stuff/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Project Amethyst</title>
+      <link>//localhost:1313/novel-stuff/amethyst/</link>
+      <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
+      <guid>//localhost:1313/novel-stuff/amethyst/</guid>
+      <description>&lt;p&gt;To be explained&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Project Oriole</title>
+      <link>//localhost:1313/novel-stuff/oriole/</link>
+      <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
+      <guid>//localhost:1313/novel-stuff/oriole/</guid>
+      <description>&lt;p&gt;To be explained&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Wips</title>
+      <link>//localhost:1313/novel-stuff/wips/</link>
+      <pubDate>Tue, 28 Jan 2025 20:24:53 +0000</pubDate>
+      <guid>//localhost:1313/novel-stuff/wips/</guid>
+      <description>&lt;h1 id=&#34;breakdown&#34;&gt;Breakdown&lt;/h1&gt;</description>
+    </item>
+  </channel>
+</rss>

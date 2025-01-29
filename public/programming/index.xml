@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Title test</title><link>/programming/</link><description>Recent content in Programming on Title test</description><generator>Hugo</generator><language>en-us</language><lastBuildDate/><atom:link href="/programming/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Title test</title>
+    <link>//localhost:1313/programming/</link>
+    <description>Recent content in Programming on Title test</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Jan 2025 14:35:42 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test</title>
+      <link>//localhost:1313/programming/test/</link>
+      <pubDate>Wed, 29 Jan 2025 14:35:42 +0000</pubDate>
+      <guid>//localhost:1313/programming/test/</guid>
+      <description>&lt;p&gt;test&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
