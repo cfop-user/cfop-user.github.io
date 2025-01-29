@@ -1,7 +1,8 @@
-baseURL = '/'
+baseURL = 'https://benolanlokun.com'
 languageCode = 'en-us'
 title = 'Title test'
 theme = 'paper'
+publishDir = "public"
 pluralizeListTitles = false
 [markup]
   [markup.goldmark]
