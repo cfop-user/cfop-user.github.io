@@ -1,0 +1,40 @@
+{
+	"themes": [
+		{
+			"name": "Light",
+			"class": "theme-light"
+		},
+		{
+			"name": "Dark",
+			"class": "theme-dark"
+		},
+		{
+			"name": "Blossom",
+			"class": "theme-cherry-blossom"
+		},
+		{
+			"name": "Berry",
+			"class": "theme-raspberry"
+		},
+		{
+			"name": "Sepia",
+			"class": "theme-sepia"
+		},
+		{
+			"name": "Jest",
+			"class": "theme-jest"
+		},
+		{
+			"name": "Emerald City",
+			"class": "theme-emerald"
+		},
+		{
+			"name": "Grape",
+			"class": "theme-grape"
+		},
+		{
+			"name": "Space",
+			"class": "theme-space"
+		}
+	]
+}

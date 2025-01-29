@@ -1,0 +1,9 @@
+{{ define "main" }}
+	<main class="post-list">
+		{{ $section := .Section }}
+		{{ $pages := .Site.GetPage "section" $section }}
+		{{ range $pages.Pages }}
+			{{ .Render "summary" }}
+		{{ end }}
+	</main>
+{{ end }}
