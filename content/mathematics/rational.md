@@ -1,6 +1,6 @@
 ---
 date: 2025-01-28T23:18:36Z
-draft: true
+draft: false
 title: Proof that there are infinitely many rational numbers between any two real numbers
 ---
 

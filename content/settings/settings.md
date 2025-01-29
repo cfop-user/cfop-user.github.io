@@ -1,5 +1,5 @@
 ---
 layout: settings
-headless: true
+headless: false
 ---
 # Settings

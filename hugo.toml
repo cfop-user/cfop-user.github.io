@@ -12,6 +12,12 @@ pluralizeListTitles = false
         [markup.goldmark.extensions.passthrough.delimiters]
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)'], ['$', '$']]
+
 [params]
   math = true
 
+customcss = [
+	"css/settings.css",
+	"css/theme.css",
+	"css/styles.css"
+]

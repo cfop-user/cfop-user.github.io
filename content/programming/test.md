@@ -1,7 +1,7 @@
 ---
-date: '2025-01-29T14:35:42Z'
-draft: true
-title: 'Test'
+date: 2025-01-29T14:35:42Z
+draft: false
+title: Test
 ---
 test
 <!--more-->
