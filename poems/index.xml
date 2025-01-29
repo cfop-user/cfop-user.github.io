@@ -6,7 +6,21 @@
     <description>Recent content in Poems on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Tue, 28 Jan 2025 15:04:24 +0000</lastBuildDate>
     <atom:link href="https://ben-251.github.io/ben-251.github.io/poems/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Poem page One</title>
+      <link>https://ben-251.github.io/ben-251.github.io/poems/test/</link>
+      <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
+      <guid>https://ben-251.github.io/ben-251.github.io/poems/test/</guid>
+      <description>&lt;h1 id=&#34;header-for-first-poem-page&#34;&gt;Header for First poem page&lt;/h1&gt;&#xA;&lt;p&gt;First content example is a long, long&#xA;string of text that strethces on&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Three point one</title>
+      <link>https://ben-251.github.io/ben-251.github.io/poems/section-3/poem-3.1/</link>
+      <pubDate>Tue, 28 Jan 2025 15:04:24 +0000</pubDate>
+      <guid>https://ben-251.github.io/ben-251.github.io/poems/section-3/poem-3.1/</guid>
+      <description>&lt;p&gt;words&#xA;words&#xA;words&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
