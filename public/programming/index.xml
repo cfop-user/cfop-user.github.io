@@ -2,18 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Title test</title>
-    <link>//localhost:1313/programming/</link>
+    <link>https://benolanlokun.com/programming/</link>
     <description>Recent content in Programming on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jan 2025 14:35:42 +0000</lastBuildDate>
-    <atom:link href="//localhost:1313/programming/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test</title>
-      <link>//localhost:1313/programming/test/</link>
-      <pubDate>Wed, 29 Jan 2025 14:35:42 +0000</pubDate>
-      <guid>//localhost:1313/programming/test/</guid>
-      <description>&lt;p&gt;test&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="https://benolanlokun.com/programming/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
