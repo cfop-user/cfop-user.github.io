@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Poems on Title test</title>
-    <link>https://benolanlokun.com/poems/</link>
+    <link>https://ben-251.github.io/ben-251.github.io/poems/</link>
     <description>Recent content in Poems on Title test</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://benolanlokun.com/poems/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ben-251.github.io/ben-251.github.io/poems/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
