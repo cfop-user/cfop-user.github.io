@@ -3,7 +3,7 @@
 .theme-light {
 	// primary
 	--primary-color: #212729;
-	--primary-bg: #e4e6e7;
+	--primary-bg: #f0eded;
 	--primary-accent: #b5dce7;
 
 	// secondary 
@@ -149,5 +149,22 @@
 	// tertiary 
 	--tertiary-color: var(--secondary-color);
 	--tertiary-bg: #6a48797b;
+	--tertiary-accent: #dcc8ff;
+}
+
+.theme-space {
+	// primary
+	--primary-color: #f6f6ff;
+	--primary-bg: #1a1147;
+	--primary-accent: rgb(82, 69, 140);
+
+	// secondary 
+	--secondary-color: #fff;
+	--secondary-bg: #06062a;
+	--secondary-accent: #7e94eb;
+
+	// tertiary 
+	--tertiary-color: var(--secondary-color);
+	--tertiary-bg: #3a324c7b;
 	--tertiary-accent: #dcc8ff;
 }

@@ -1,6 +1,6 @@
 .theme-light {
   --primary-color: #212729;
-  --primary-bg: #e4e6e7;
+  --primary-bg: #f0eded;
   --primary-accent: #b5dce7;
   --secondary-color: var(--primary-bg);
   --secondary-bg: var(--primary-color);
@@ -15,9 +15,9 @@
   --primary-bg: #212729;
   --primary-accent: #317486;
   --secondary-color: white;
-  --secondary-bg: rgb(18.36, 24.48, 27.54);
+  --secondary-bg: #12181c;
   --secondary-accent: #408b8b;
-  --tertiary-color: rgb(91.8, 122.4, 137.7);
+  --tertiary-color: #5c7a8a;
   --tertiary-bg: #c6d1d1;
   --tertiary-accent: color-mix(in srgb, var(--primary-color), var(--secondary-accent)) ;
 }
@@ -39,7 +39,7 @@
   --primary-bg: #fff;
   --primary-accent: hotpink;
   --secondary-color: #511b36;
-  --secondary-bg: rgb(248.25, 216.75, 232.5);
+  --secondary-bg: #f8d9e9;
   --secondary-accent: hotpink;
   --tertiary-color: white;
   --tertiary-bg: #ca9dbc;
@@ -52,9 +52,9 @@
   --primary-bg: #eee0cb;
   --primary-accent: rgb(192, 130, 106);
   --secondary-color: white;
-  --secondary-bg: rgb(179.1, 135.7, 118.9);
+  --secondary-bg: #b38877;
   --secondary-bg: color-mix(in srgb, #c2847a, var(--primary-bg));
-  --secondary-accent: rgb(131.2886792453, 49.4073277753, 17.7113207547);
+  --secondary-accent: #833112;
   --tertiary-color: var(--secondary-color);
   --tertiary-bg: #bdb19f;
   --tertiary-bg: #baa898;
@@ -97,6 +97,18 @@
   --tertiary-accent: #dcc8ff;
 }
 
+.theme-space {
+  --primary-color: #f6f6ff;
+  --primary-bg: #1a1147;
+  --primary-accent: rgb(82, 69, 140);
+  --secondary-color: #fff;
+  --secondary-bg: #06062a;
+  --secondary-accent: #7e94eb;
+  --tertiary-color: var(--secondary-color);
+  --tertiary-bg: #3a324c7b;
+  --tertiary-accent: #dcc8ff;
+}
+
 .theme-options {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -107,16 +119,21 @@
   /* grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); */
 }
 .theme-options .theme-item {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   color: var(--primary-color);
   font-size: 1.5em;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: var(--primary-bg);
   position: relative;
   padding: 2rem;
   padding-right: 3rem;
-  text-decoration: var(--primary-accent) 2px underline;
+  -webkit-text-decoration: var(--primary-accent) 2px underline;
+          text-decoration: var(--primary-accent) 2px underline;
   text-underline-offset: 0.25em;
   --middle: 70%;
   --right: 95%;
@@ -124,7 +141,6 @@
 }
 .theme-options .theme-item.active {
   border: 3px outset var(--primary-accent);
-  box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
-}
-
-/*# sourceMappingURL=settings.css.map */
+  -webkit-box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
+          box-shadow: 0 0 15px color-mix(in srgb, transparent 80%, var(--secondary-bg));
+}/*# sourceMappingURL=settings.css.map */

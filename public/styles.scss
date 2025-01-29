@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cardo');
 @import url('https://fonts.googleapis.com/css2?family=Spectral');
 @import url('https://fonts.googleapis.com/css2?family=Jost');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair');
 
 * {
 	box-sizing: border-box;
@@ -14,10 +15,10 @@
 
 *:root {
 	--nav-width: 20vw;
-	--primary-font:spectral, 'Cardo';
+	--primary-font: spectral, 'Cardo';
 	--sans-font: jost, "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
 	--header-font: "Spectral", "Playfair Display", "Julius sans one";
-	--logo-font: 'Playfair display';
+	--logo-font: Bellefair, 'Playfair display';
 	--main-font-size: 18px;
 	font-size: var(--main-font-size);
 	/* to set rem */
@@ -81,8 +82,19 @@ body {
 	.navbar-item.navbar-logo {
 		font-size: 2.4rem;
 		font-family: var(--logo-font);
+		font-weight: 100;
 		text-transform: capitalize;
 		margin-block: 2rem;
+		line-height: 1.4;
+
+		&::after {
+			content: '';
+			width: 70%;
+			height: 2px;
+			background-color: var(--secondary-accent);
+			display: block;
+			margin: auto;
+		}
 	}
 
 	a,
@@ -232,7 +244,9 @@ body {
 
 		.preview {
 			background-color: var(--tertiary-low-op);
+			background-color: var(--primary-bg);
 			color: var(--tertiary-color);
+			color: var(--primary-color);
 			opacity: 0.8;
 
 			height: max-content;
@@ -257,13 +271,17 @@ body {
 
 			.more-link {
 				color: var(--tertiary-color);
+				color: var(--primary-color);
 				text-decoration: underline 2px color-mix(in srgb, var(--tertiary-accent), var(--tertiary-color));
+				text-decoration: underline 2px color-mix(in srgb, var(--primary-accent), var(--primary-color));
 			}
 		}
 
 		.tag {
 			background-color: var(--tertiary-low-op);
+			background-color: var(--primary-bg);
 			color: var(--tertiary-color);
+			color: var(--primary-color);
 		}
 	}
 
@@ -298,4 +316,11 @@ body {
 		margin-inline-start: .4em;
 	}
 }
+}
+
+// Maths
+.mjx-c25FB.TEX-A {
+	color: color-mix(in srgb, var(--primary-accent), var(--primary-color) 50%);
+	font-weight: 1000;
+
 }
