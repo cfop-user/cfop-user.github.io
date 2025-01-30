@@ -157,7 +157,7 @@
 }
 
 *:root {
-  --nav-width: 20vw;
+  --nav-width: 15vw;
   --primary-font: spectral, "Cardo";
   --sans-font: jost, "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
   --header-font: "Spectral", "Playfair Display", "Julius sans one";
@@ -178,6 +178,14 @@ body {
   font-size: 1rem;
   overflow: scroll;
   min-height: 100vh;
+  height: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 body a {
   color: var(--primary-color);
@@ -198,6 +206,7 @@ body {
   min-width: -webkit-min-content;
   min-width: -moz-min-content;
   min-width: min-content;
+  text-wrap: pretty;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -205,7 +214,8 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: fixed;
+  position: sticky;
+  top: 0;
   height: 100vh;
   padding: 3em 1.4em 3em 1.4em;
   background-color: var(--secondary-bg);
@@ -225,6 +235,9 @@ body {
   text-transform: capitalize;
   margin-block: 2rem;
   line-height: 1.4;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
 }
 .navbar .navbar-item.navbar-logo::after {
   content: "";
@@ -433,7 +446,8 @@ body {
           margin-inline-start: 0.4em;
 }
 
-.mjx-c25FB.TEX-A {
-  color: color-mix(in srgb, var(--primary-accent), var(--primary-color) 50%);
+.TEX-A:is(.mjx-c25FB, .mjx-c25FC) {
+  --special-color: color-mix(in srgb, var(--primary-accent), var(--primary-color) 70%);
+  color: var(--special-color);
   font-weight: 1000;
 }/*# sourceMappingURL=styles.css.map */

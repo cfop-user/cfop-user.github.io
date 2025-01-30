@@ -14,7 +14,7 @@
 
 
 *:root {
-	--nav-width: 20vw;
+	--nav-width: 15vw;
 	--primary-font: spectral, 'Cardo';
 	--sans-font: jost, "quicksand", "Julius sans one", "Jura", "Bricolage Grotesque";
 	--header-font: "Spectral", "Playfair Display", "Julius sans one";
@@ -34,6 +34,10 @@ body {
 	font-size: 1rem;
 	overflow: scroll;
 	min-height: 100vh;
+	height: 100;
+
+	display: flex;
+	flex-direction: row;
 
 	a {
 		color: var(--primary-color)
@@ -59,11 +63,13 @@ body {
 	box-sizing: border-box;
 	width: var(--nav-width);
 	min-width: min-content;
+	text-wrap: pretty;
 
 	display: flex;
 	flex-direction: column;
 	
-	position: fixed;
+	position: sticky;
+	top: 0;
 	height: 100vh;
 	padding: 3em 1.4em 3em 1.4em;
 
@@ -86,6 +92,7 @@ body {
 		text-transform: capitalize;
 		margin-block: 2rem;
 		line-height: 1.4;
+		width: min-content;
 
 		&::after {
 			content: '';
@@ -319,8 +326,9 @@ body {
 }
 
 // Maths
-.mjx-c25FB.TEX-A {
-	color: color-mix(in srgb, var(--primary-accent), var(--primary-color) 50%);
+.TEX-A:is(.mjx-c25FB, .mjx-c25FC) {
+	--special-color: color-mix(in srgb, var(--primary-accent), var(--primary-color) 70%);
+	color: var(--special-color);
 	font-weight: 1000;
-
+	// background-color: var(--special-color);
 }

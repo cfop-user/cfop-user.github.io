@@ -1,6 +1,6 @@
 baseURL = "https://ben-251.github.io/ben-251.github.io/"
 languageCode = 'en-us'
-title = 'Title test'
+title = 'Ben Olanlokun'
 theme = 'paper'
 publishDir = "public"
 pluralizeListTitles = false
