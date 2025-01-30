@@ -1,21 +1,5 @@
 // import { themes } from "./settings/themeChange.js";
 
-// const dropdown = document.getElementById("blog-button");
-// let items = document.getElementById("blog-items")
-// // console.log(dropdown)
-// // console.log("test")
-// function dropdownClicked() {
-// 	// console.log("trying to add")
-// 	items.classList.toggle("open");
-// }
-
-// dropdown.addEventListener(
-// 	"click",
-// 	function () {
-// 		dropdownClicked()
-// 	}
-// )
-
 const modal = document.getElementById("modal");
 let modalImage = document.getElementById("modal-image");
 let modalHeader = document.getElementById("modal-text-header");
