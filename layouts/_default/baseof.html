@@ -3,11 +3,11 @@
 	{{ partial "head.html" . }}
 
 	<body class="theme-light" id="body">
-		{{/*  <script>
+		<script>
 			// Get the current theme from localStorage or fallback to default theme
 			const currentTheme = localStorage.getItem('theme') || 'theme-light';
 			document.getElementById('body').classList.add(currentTheme);
-		</script>  */}}
+		</script>
 		{{ partial "navbar.html" . }}
 		<div class="mainbody">
 			{{ block "main" . }}

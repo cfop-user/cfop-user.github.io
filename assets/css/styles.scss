@@ -8,6 +8,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost');
 @import url('https://fonts.googleapis.com/css2?family=Bellefair');
 
+
+
+// // ——-- BREAKPOINTS ——-- //
+
+//  mixin to print out media queries (based on map keys passed) 
+// @mixin media($breakpoint) {
+// 	@if $breakpoint == mobile {
+// 	  @media (max-width: 768px) { @content; }
+// 	}
+//   }
+@mixin media($breakpoint) {
+	$breakpoints: (
+	  mobile: "(max-width: 768px)",
+	  tablet: "(max-width: 1024px)",
+	  desktop: "(min-width: 1025px)"
+	);
+  
+	@if map-has-key($breakpoints, $breakpoint) {
+	  @media #{map-get($breakpoints, $breakpoint)} {
+		@content;
+	  }
+	} @else {
+	  @warn "Breakpoint #{$breakpoint} is not defined.";
+	}
+  }
+
+
 * {
 	box-sizing: border-box;
 }
@@ -332,3 +359,26 @@ body {
 	font-weight: 1000;
 	// background-color: var(--special-color);
 }
+
+
+
+
+// breakpoints
+@include media(mobile) {
+	body {
+		flex-direction: column;
+	}
+
+	.navbar {
+		flex-direction: row;
+		position: unset;
+		width: 100vw;
+		height: max-content;
+		background-color: red;
+
+		.navbar-item.navbar-logo{
+			display: none;
+		}
+	}
+}
+
