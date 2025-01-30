@@ -1,4 +1,5 @@
-baseURL = "https://ben-251.github.io/ben-251.github.io/"
+baseURL = "https://www.benolanlokun.com/"
+relativeURLs = true
 languageCode = 'en-us'
 title = 'Ben Olanlokun'
 theme = 'paper'
