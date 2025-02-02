@@ -36,6 +36,9 @@ jobs:
       - name: Build
         run: hugo --minify -d _site
 
+      - name: Check _site directory size
+        run: du -sh ./_site
+
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
