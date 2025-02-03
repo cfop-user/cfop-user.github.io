@@ -35,6 +35,14 @@ jobs:
 
       - name: Build
         run: hugo --minify -d _site
+        
+      - name: Debug _site contents
+        run: |
+          ls -lah _site
+          find _site -type l -exec ls -lah {} +
+          find _site -type f -size +100M
+          find _site -type f -links +1
+          find _site ! -perm -o+r
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
